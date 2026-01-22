@@ -18,8 +18,12 @@
     }
    table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: collapse;      
+      table-layout: fixed;
     }
+      .col-desc { width: 60%; }
+      .col-mlfb { width: 30%; }
+      .col-qty  { width: 10%; }
 
    th {
       background: #f5f7fa;
@@ -43,16 +47,16 @@ td.desc {
 <body>
 
 <h2>서오 재고 조회</h2>
-<p>찾으시는 제품 [ ex)CPU... ] 또는 MLFB를 입력하세요</p>
+<p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 입력하세요</p>
 
 <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
 
 <table>
   <thead>
     <tr>
-      <th>Description</th>
-      <th>MLFB</th>
-      <th>수량</th>
+      <th class="col-desc">Description</th>
+      <th class="col-mlfb">MLFB</th>
+      <th class="col-qty">수량</th>
     </tr>
   </thead>
   <tbody id="table-body"></tbody>
