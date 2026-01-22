@@ -54,6 +54,32 @@ td.desc {
       object-fit: contain;
       margin-top: 20px;
     }  
+#pagination {
+  margin-top: 24px;
+  text-align: center;
+}
+
+#pagination button {
+  min-width: 36px;
+  padding: 6px 10px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#pagination button:hover {
+  background: #f0f2f5;
+}
+
+#pagination button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  font-weight: 600;
+}
 </style>
 </head>
 <body>
@@ -82,7 +108,7 @@ td.desc {
 <script>
 let allRows = [];        //
 let filteredRows = [];  //
-const rowsPerPage = 10; //
+const rowsPerPage = 30; //
 let currentPage = 1;    //
 
 fetch("stock.csv")
@@ -135,6 +161,10 @@ function renderPagination() {
     const btn = document.createElement("button");
     btn.textContent = i;
     btn.style.margin = "0 4px";
+
+    if (i === currentPage) {
+        btn.classList.add("active");
+      }
 
     btn.onclick = () => {
       currentPage = i;
