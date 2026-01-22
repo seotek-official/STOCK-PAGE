@@ -8,7 +8,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%
+      width: 100%;
     }
     body {
       font-family: Arial, sans-serif;
@@ -76,43 +76,87 @@ td.desc {
   </thead>
   <tbody id="table-body"></tbody>
 </table>
+<div id="pagination"></div>
+
 
 <script>
+let allRows = [];        //
+let filteredRows = [];  //
+const rowsPerPage = 10; //
+let currentPage = 1;    //
+
 fetch("stock.csv")
   .then(res => res.text())
   .then(text => {
     const rows = text.trim().split("\n").slice(1);
-    const tbody = document.getElementById("table-body");
 
-    rows.forEach(row => {
-      const cols = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-      if (cols && cols.length >= 3) {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td class="desc" title="${cols[0].replace(/"/g, "")}">
-            ${cols[0].replace(/"/g, "")}
-          </td>
-          <td>${cols[1].replace(/"/g, "")}</td>
-          <td>${cols[2].replace(/"/g, "")}</td>
-        `;
-        tbody.appendChild(tr);
-      }
-    });
+    allRows = rows.map(row => {
+       const cols = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+       if (!cols || cols.length < 3) return null;
 
-    document.getElementById("search").addEventListener("input", function () {
-      const value = this.value.toLowerCase();
+       return {
+         desc: cols[0].replace(/"/g, ""),
+         part: cols[1].replace(/"/g, ""),
+         qty: cols[2].replace(/"/g, "")
+       };
+}).filter(Boolean);
 
-      Array.from(tbody.children).forEach(tr => {
-        const description = tr.children[0].innerText.toLowerCase();
-        const partno = tr.children[1].innerText.toLowerCase();
+filteredRows = allRows;
 
-        tr.style.display =
-          description.includes(value) || partno.includes(value)
-            ? ""
-            : "none";
-      });
-    });
+renderTable();
+    renderPagination();
   });
+
+function renderTable() {
+  const tbody = document.getElementById("table-body");
+  tbody.innerHTML = "";
+
+  const start = (currentPage - 1) * rowsPerPage;
+  const pageRows = filteredRows.slice(start, start + rowsPerPage);
+
+  pageRows.forEach(row => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="desc" title="${row.desc}">${row.desc}</td>
+      <td>${row.part}</td>
+      <td>${row.qty}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+
+function renderPagination() {
+  const pageCount = Math.ceil(filteredRows.length / rowsPerPage);
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+
+  for (let i = 1; i <= pageCount; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    btn.style.margin = "0 4px";
+
+    btn.onclick = () => {
+      currentPage = i;
+      renderTable();
+    };
+
+    pagination.appendChild(btn);
+  }
+}
+
+document.getElementById("search").addEventListener("input", function () {
+  const value = this.value.toLowerCase();
+
+  filteredRows = allRows.filter(row =>
+    row.desc.toLowerCase().includes(value) ||
+    row.part.toLowerCase().includes(value)
+  );
+
+  currentPage = 1;
+  renderTable();
+  renderPagination();
+});
 </script>
 
 </body>
