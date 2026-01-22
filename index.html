@@ -55,31 +55,29 @@ td.desc {
       margin-top: 20px;
     }  
 #pagination {
-  margin-top: 24px;
+  margin-top: 20px;
   text-align: center;
 }
 
 #pagination button {
-  min-width: 36px;
-  padding: 6px 10px;
-  margin: 0 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border: 1px solid  #ccc
+  background: white;
   cursor: pointer;
-  font-size: 14px;
+  border-radius: 4px;
+  }
+
+#pagination button.active {
+  background: #2c7be5;
+  color: white;
+  font-weight: bold;
+  border-color: #2c7be5;
 }
 
 #pagination button:hover {
-  background: #f0f2f5;
+  background: #eee;
 }
 
-#pagination button.active {
-  background: #2563eb;
-  color: #fff;
-  border-color: #2563eb;
-  font-weight: 600;
-}
 </style>
 </head>
 <body>
@@ -160,7 +158,6 @@ function renderPagination() {
   for (let i = 1; i <= pageCount; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
-    btn.style.margin = "0 4px";
 
     if (i === currentPage) {
         btn.classList.add("active");
@@ -169,6 +166,7 @@ function renderPagination() {
     btn.onclick = () => {
       currentPage = i;
       renderTable();
+      renderPagination();
     };
 
     pagination.appendChild(btn);
