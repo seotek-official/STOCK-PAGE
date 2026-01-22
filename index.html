@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>Stock Inquiry</title>
   <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    logo {
+      height: 48px;
+    }
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
@@ -46,8 +54,12 @@ td.desc {
 </head>
 <body>
 
-<h2>서오 재고 조회</h2>
-<p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 입력하세요</p>
+<div class="header">
+  <h2>서오 재고 조회</h2>
+  <img src="company_logo.jpg" alt="company Logo" class="logo">
+</div>
+
+  <p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 입력하세요</p>
 
 <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
 
