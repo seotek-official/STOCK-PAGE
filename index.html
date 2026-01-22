@@ -61,7 +61,7 @@ td.desc {
 
 #pagination button {
   padding: 6px 12px;
-  border: 1px solid  #ccc
+  border: 1px solid  #ccc;
   background: white;
   cursor: pointer;
   border-radius: 4px;
@@ -160,7 +160,7 @@ function renderPagination() {
   let startPage = Math.floor((currentPage - 1) / maxButtons) * maxButtons + 1;
   let endPage = Math.min(startPage + maxButtons - 1, pageCount);
 
-  const firtstBtn = document.createElement("button");
+  const firstBtn = document.createElement("button");
     firstBtn.textContent = "<< 처음";
     firstBtn.disabled = currentPage === 1;
     firstBtn.onclick = () => {
@@ -210,8 +210,8 @@ function renderPagination() {
   }
 
   const lastBtn = document.createElement("button");
-  lastBtn. textContent = "끝 >>";
-  lastBtn. disabled = currentPage === pageCount;
+  lastBtn.textContent = "끝 >>";
+  lastBtn.disabled = currentPage === pageCount;
   lastBtn.onclick = () => {
     currentPage = pageCount;
     renderTable();
