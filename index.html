@@ -154,36 +154,53 @@
     cursor: pointer;
   }
 
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
 
-.contact-link {
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: 600;
-  color: #2563eb;
-}
-.contact-link:hover {
-  opacity: 0.8;
-}
+  .contact-link {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2563eb;
+  }
+  .contact-link:hover {
+    opacity: 0.8;
+  }
 
-.copy-btn {
-  margin-left: 6px;
-  padding: 2px 6px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  background: #f9fafb;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  .copy-btn {
+    margin-left: 6px;
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: #f9fafb;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-.copy-btn:hover {
-  background: #e5e7eb;
-}
+  .copy-btn:hover {
+    background: #e5e7eb;
+  }
+
+  .mlfb-text {
+    font-weight: 500;
+  }
+
+  .copy-icon {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #6b7280;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .copy-icon:hover {
+    color: #2563eb;
+    text-decoration: underline;
+  }
 
 
 </style>
@@ -313,7 +330,7 @@ fetch("stock.csv")
           ${highlight(row.desc)}</td>
         <td>
           <span class="mlfb-text">${row.part}</span>
-          <button class="copy-btn" onclick="copyMLFB('${row.part}')">📋</button>
+          <button class="copy-btn" onclick="copyMLFB('${row.part}')" title="복사">복사</span>
         </td>
         <td class="status-${row.status}" onclick="openModal()">
           ${statusText(row.status)}
