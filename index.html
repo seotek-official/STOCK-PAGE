@@ -298,7 +298,7 @@ fetch("stock.csv")
         <td class="desc" title="${row.desc}">
           ${highlight(row.desc)}</td>
         <td>${row.part}</td>
-        <td class="status-${row.status}" onclick="openModal()"}>
+        <td class="status-${row.status}" onclick="openModal()">
           ${statusText(row.status)}
         </td>
       `;
@@ -505,6 +505,17 @@ fetch("stock.csv")
       filteredRows.sort((a, b) => order[a.status] - order[b.status]);
     }
   }
+
+  const modal = document.getElementById("contactModal");
+  const modalContent = modal.querySelector(".modal-content");
+
+  modal.addEventListener("click", function () {
+    closeModal();
+  });
+
+  modalContent.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
 
 
 </script>
