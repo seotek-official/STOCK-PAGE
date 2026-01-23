@@ -170,6 +170,24 @@
   <button id="searchBtn" type="button">검색</button>
 </div>
 
+<div style="margin-bottom:12px;">
+  <label>
+    <input type="radio" name="matchType" value="partial" checked>
+    부분일치
+  </label>
+  &nbsp;&nbsp;
+  <label>
+    <input type="radio" name="matchType" value="exact">
+    완전일치
+  </label>
+</div>
+
+
+<p style="font-size:13px;color:#777;margin-bottom:12px;">
+  ※ 안내: 본 정보는 실제와 다를 수 있으며, 정확한 재고는 문의 바랍니다.
+</p>
+
+
 <div id ="contactModal" style="display:none;">
   <div class="modal-content">
     <h3>문의 안내</h3>
@@ -192,6 +210,19 @@
     <button onclick="closeModal()">닫기</button>
   </div>
 </div>  
+
+<div id="update-info" style="font-size:13px;color:#666;margin-bottom:8px;">
+  데이터 기준일: -
+</div>
+
+<div style="margin-bottom:12px;">
+  <select id="sortSelect">
+    <option value="">정렬 없음</option>
+    <option value="mlfb">MLFB 오름차순</option>
+    <option value="status">재고 상태 우선 (A → B → C)</option>
+  </select>
+</div>
+
 
 <table>
   <thead>
@@ -220,6 +251,11 @@ fetch("stock.csv")
   .then(res => res.text())
   .then(text => {
     const rows = text.trim().split("\n").slice(1);
+
+    const lastModified = new Date().toISOString().slice(0, 10);
+    document.getElementById("update-info").textContent =
+      `데이터 기준일: ${lastModified}`;
+
 
     allRows = rows.map(row => {
        const cols = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
@@ -358,42 +394,37 @@ fetch("stock.csv")
 
   document.getElementById("searchBtn").addEventListener("click", function () {
     const value = document.getElementById("search").value.toLowerCase();
+    const matchType = document.querySelector('input[name="matchtype"]:checked').value;
 
-    if(!value) {
+    if (!value || value.length < 2) {
       filteredRows = [];
-      searchKeyword = "";
-      currentPage = 1;
-      renderTable();
-      renderPagination();
-      renderResultInfo();
-      return;
-    }
-
-    if (value.length < 2) {
-      filteredRows = [];
-      searchKeyword = value;
-      currentPage = 1;
-      renderTable();
-      renderPagination();
-
       document.getElementById("result-info").textContent =
         "검색어는 2글자 이상 입력해주세요.";
+      renderTable();
+      renderPagination();
       return;
     }
-
 
     searchKeyword = value;
 
-    filteredRows = allRows.filter(row =>
-      row.desc.toLowerCase().includes(value) ||
-      row.part.toLowerCase().includes(value)
-    );
+    filteredRows = allRows.filter(row => {
+      const desc = row.desc.toLowerCase();
+      const part = row.part.toLowerCase();
 
-    currentPage = 1;
-    renderTable();
-    renderPagination();
-    renderResultInfo();
-  });
+      if (matchType === "exact") {
+        return desc === value || part === value;
+      } else {
+        return desc.includes(value) || part.includes(value);
+      }
+    });
+
+  applySort();
+
+  currentPage = 1;
+  renderTable();
+  renderPagination();
+  renderResultInfo();
+});
 
   document.getElementById("search").addEventListener("input", function () {
     const value = this.value.trim();
@@ -414,14 +445,18 @@ fetch("stock.csv")
 
 
   document.getElementById("search").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && !document.getElementById("searchBtn").disabled) {
       document.getElementById("searchBtn").click();
     }
   });
 
-  document.getElementById("search").addEventListener("input", function () {
-    document.getElementById("searchBtn").disabled = this.value.trim().length < 2;
+  document.getElementById("sortSelect").addEventListener("change", function () {
+    applySort();
+    currentPage = 1;
+    renderTable();
+    renderPagination();
   });
+
 
 
   function highlight(text) {
@@ -450,6 +485,20 @@ fetch("stock.csv")
   function closeModal() {
     document.getElementById("contactModal").style.display = "none";
   }
+
+  function applySort() {
+    const sortType = document.getElementById("sortSelect").value;
+
+    if (sortType === "mlfb") {
+      filteredRows.sort((a, b) => a.part.localeCompare(b.part));
+    }
+
+    if (sortType === "status") {
+      const order = { A: 1, B: 2, C: 3 };
+      filteredRows.sort((a, b) => order[a.status] - order[b.status]);
+    }
+  }
+
 
 </script>
 
