@@ -219,6 +219,8 @@ fetch("stock.csv")
        };
     }).filter(Boolean);
 
+  console.log(allRows);
+
   filteredRows = allRows;
 
   renderTable();
@@ -242,7 +244,7 @@ fetch("stock.csv")
         <td class="status-${row.status}" ${row.status !=="A" ? 'onclick="openModal()"' : ""}>
           ${statusText(row.status)}
         </td>
-      ';
+      `;
       tbody.appendChild(tr);
     });
   }
