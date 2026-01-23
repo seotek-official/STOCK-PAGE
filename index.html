@@ -187,19 +187,6 @@
   <button id="searchBtn" type="button">검색</button>
 </div>
 
-<div style="margin-bottom:12px;">
-  <label>
-    <input type="radio" name="matchType" value="partial" checked>
-    부분일치
-  </label>
-  &nbsp;&nbsp;
-  <label>
-    <input type="radio" name="matchType" value="exact">
-    완전일치
-  </label>
-</div>
-
-
 <p style="font-size:13px;color:#777;margin-bottom:12px;">
   ※ 안내: 본 정보는 실제와 다를 수 있으며, 자세한 사항은 
   <span class="contact-link" onclick="openModal()">문의</span>
@@ -418,7 +405,6 @@ fetch("stock.csv")
 
   document.getElementById("searchBtn").addEventListener("click", function () {
     const value = document.getElementById("search").value.toLowerCase();
-    const matchType = document.querySelector('input[name="matchType"]:checked').value;
 
     if (!value || value.length < 2) {
       filteredRows = [];
@@ -435,11 +421,8 @@ fetch("stock.csv")
       const desc = row.desc.toLowerCase();
       const part = row.part.toLowerCase();
 
-      if (matchType === "exact") {
-        return desc === value || part === value;
-      } else {
-        return desc.includes(value) || part.includes(value);
-      }
+    return desc.includes(value) || part.includes(value);
+
     });
 
   applySort();
