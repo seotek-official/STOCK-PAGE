@@ -15,7 +15,7 @@
       max-width: 800px;
       margin: 40px auto;
     }
-    input [type="text"] {
+    input[type="text"] {
       width: 100%;
       padding: 14px 16px;
       font-size: 16px;
@@ -155,6 +155,14 @@
     cursor: pointer;
   }
 
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+
 </style>
 </head>
 <body>
@@ -211,9 +219,20 @@
   </div>
 </div>  
 
-<div id="update-info" style="font-size:13px;color:#666;margin-bottom:8px;">
-  데이터 기준일: -
+<div class="info-row">
+  <div id="update-info" style="font-size:13px;color:#666;margin-bottom:8px;">
+    데이터 기준일: -
+  </div>
+
+  <div class="sort-box">
+    <select id="sortSelect">
+      <option value="">정렬 없음</option>
+      <option value="mlfb">MLFB 오름차순</option>
+      <option value="status">재고 상태 우선</option>
+    </select>
+  </div>
 </div>
+
 
 <div style="margin-bottom:12px;">
   <select id="sortSelect">
@@ -394,7 +413,7 @@ fetch("stock.csv")
 
   document.getElementById("searchBtn").addEventListener("click", function () {
     const value = document.getElementById("search").value.toLowerCase();
-    const matchType = document.querySelector('input[name="matchtype"]:checked').value;
+    const matchType = document.querySelector('input[name="matchType"]:checked').value;
 
     if (!value || value.length < 2) {
       filteredRows = [];
