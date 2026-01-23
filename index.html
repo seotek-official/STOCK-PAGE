@@ -232,11 +232,8 @@ fetch("stock.csv")
 
   console.log(allRows);
 
-  filteredRows = allRows;
-
-  renderTable();
-    renderPagination();
-    renderResultInfo();
+  filteredRows = [];
+  renderResultInfo();
   });
 
   function renderTable() {
@@ -262,6 +259,11 @@ fetch("stock.csv")
 
   function renderResultInfo() {
     const info = document.getElementById("result-info");
+
+    if (!searchKeyword) {
+      info.textContent = "검색어를 입력하신 후 검색 버튼을 눌러주세요.";
+      return;
+    }
 
     const total = filteredRows.length;
     if (total === 0) {
@@ -365,6 +367,7 @@ fetch("stock.csv")
     currentPage = 1;
     renderTable();
     renderPagination();
+    renderResultInfo();
   });
 
   document.getElementById("search").addEventListener("keydown", function (e) {
