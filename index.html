@@ -22,38 +22,58 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-   table {
-      width: 100%;
-      border-collapse: collapse;      
-      table-layout: fixed;
-    }
+  .search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .search-box input {
+    flex: 1;
+  }
+  .search-box button {
+    padding: 0 20px;
+    font-size: 16px;
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .search-box button:hover {
+    background: #1e4fd8;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;      
+    table-layout: fixed;
+  }
       .col-desc { width: 60%; }
       .col-mlfb { width: 30%; }
       .col-qty  { width: 10%; }
 
-   th {
+  th {
       background: #f5f7fa;
       font-weight: 600;
       text-align: left;
       padding: 12px;
       border-bottom: 2px solid #ddd;
-    }
+  }
 
-td {
-  padding: 10px 12px;
-  border-bottom: 1px solid #eee;
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
   }
-td.desc {
-  max-width: 600px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  td.desc {
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-.logo {
-      height: 100px;
-      object-fit: contain;
-      margin-top: 20px;
-    }  
+  .logo {
+    height: 100px;
+    object-fit: contain;
+    margin-top: 20px;
+  }  
 #pagination {
   margin-top: 20px;
   text-align: center;
@@ -88,7 +108,10 @@ td.desc {
 </div>
   <p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 입력하세요</p>
 
-<input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
+<div class="search-box">
+  <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
+  <button id="searchBtn">검색</button>
+</div>
 
 <table>
   <thead>
@@ -225,8 +248,8 @@ function renderPagination() {
   pagination.appendChild(lastBtn);
 }
 
-document.getElementById("search").addEventListener("input", function () {
-  const value = this.value.toLowerCase();
+document.getElementById("searchBtn").addEventListener("click", function () {
+  const value = document.getElementById("search").value.toLowerCase();
 
   filteredRows = allRows.filter(row =>
     row.desc.toLowerCase().includes(value) ||
@@ -236,8 +259,7 @@ document.getElementById("search").addEventListener("input", function () {
   currentPage = 1;
   renderTable();
   renderPagination();
-});
-</script>
+});</script>
 
 </body>
 </html>
