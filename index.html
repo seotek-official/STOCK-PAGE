@@ -202,6 +202,17 @@
     text-decoration: underline;
   }
 
+  .mlfb-link {
+    color: #2563eb;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .mlfb-link:hover {
+    opacity: 0.85;
+  }
+
 
 </style>
 </head>
@@ -329,8 +340,9 @@ fetch("stock.csv")
         <td class="desc" title="${row.desc}">
           ${highlight(row.desc)}</td>
         <td>
-          <span class="mlfb-text">${row.part}</span>
-          <button class="copy-btn" onclick="copyMLFB('${row.part}')" title="복사">복사</span>
+          <span class="mlfb-link" onclick="copyMLFB('${row.part}')">
+            ${row.part}
+          </span>
         </td>
         <td class="status-${row.status}" onclick="openModal()">
           ${statusText(row.status)}
@@ -561,9 +573,7 @@ fetch("stock.csv")
   });
 
   function copyMLFB(text) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert(`MLFB 복사됨:\n${text}`);
-    });
+    navigator.clipboard.writeText(text);
   }
 
 
