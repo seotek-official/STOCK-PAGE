@@ -296,7 +296,7 @@ fetch("stock.csv")
         <td class="desc" title="${row.desc}">
           ${highlight(row.desc)}</td>
         <td>${row.part}</td>
-        <td class="status-${row.status}" ${row.status !=="A" ? 'onclick="openModal()"' : ""}>
+        <td class="status-${row.status}" onclick="openModal()"}>
           ${statusText(row.status)}
         </td>
       `;
