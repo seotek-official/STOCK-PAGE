@@ -163,7 +163,7 @@
   <h2>서오 재고 조회</h2>
   <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
 </div>
-  <p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 2글자 이상 입력하세요</p>
+  <p>찾으시는 제품 [ ex) CPU... ] 또는 MLFB를 입력하세요</p>
 
 <div class="search-box">
   <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
@@ -213,6 +213,8 @@ let filteredRows = [];  //
 let searchKeyword = ""; //
 const rowsPerPage = 30; //
 let currentPage = 1;    //
+
+document.getElementById("searchBtn").disabled = true;
 
 fetch("stock.csv")
   .then(res => res.text())
@@ -392,6 +394,24 @@ fetch("stock.csv")
     renderPagination();
     renderResultInfo();
   });
+
+  document.getElementById("search").addEventListener("input", function () {
+    const value = this.value.trim();
+    const info = document.getElementById("result-info");
+    const btn = document.getElementById("searchBtn");
+
+    if (value.length === 0) {
+      info.textContent = "";
+      btn.disabled = true;
+    } else if (value.length < 2) {
+      info.textContent = "검색어는 2글자 이상 입력해주세요.";
+      btn.disabled = true;
+    } else {
+      info.textContent = "";
+      btn.disabled = false;
+    }
+  });
+
 
   document.getElementById("search").addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
