@@ -463,12 +463,14 @@ fetch("stock.csv")
 
     searchKeyword = value;
 
-  const statusPriority = { A: 3, B: 2, C: 1 };
+    const statusPriority = { A: 3, B: 2, C: 1 };
+    const keyword = normalize(value);
 
     const matchedRows = allRows.filter(row => {
-      const desc = row.desc.toLowerCase();
-      const part = row.part.toLowerCase();
-      return desc.includes(value) || part.includes(value);
+      return (
+        normalize(row.desc).includes(keyword) ||
+        normalize(row.part).includes(keyword)
+      );
     });
 
     const map = new Map();
@@ -476,7 +478,7 @@ fetch("stock.csv")
     matchedRows.forEach(row => {
       const key = row.part;
 
-      if (!map.has(key)) {
+      if(!map.has(key) {
         map.set(key, row);
       } else {
         const existing = map.get(key);
@@ -593,6 +595,12 @@ fetch("stock.csv")
     navigator.clipboard.writeText(text);
   }
 
+  function normalize(text) {
+    return text
+      .toLowerCase()
+      .replace(/\s+/g, "")
+      .replace(/-/g, "");
+  }
 
 
 </script>
