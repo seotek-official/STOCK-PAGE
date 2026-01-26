@@ -478,7 +478,7 @@ fetch("stock.csv")
     matchedRows.forEach(row => {
       const key = row.part;
 
-      if(!map.has(key) {
+      if(!map.has(key)) {
         map.set(key, row);
       } else {
         const existing = map.get(key);
