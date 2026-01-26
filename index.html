@@ -68,7 +68,17 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
   }
+
+  td.desc.collapsed {
+    white-space: nowrap;
+  }
+
+  td.desc.expanded {
+    white-space: normal;
+  }
+
   .logo {
     height: 100px;
     object-fit: contain;
@@ -213,6 +223,16 @@
     opacity: 0.85;
   }
 
+  td.desc::after {
+    content: " ▸";
+    color: #9ca3af;
+    font-size: 12px;
+  }
+
+  td.desc.expanded::after {
+    content: " ▾";
+  }
+
 
 </style>
 </head>
@@ -337,8 +357,9 @@ fetch("stock.csv")
     pageRows.forEach(row => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td class="desc" title="${row.desc}">
-          ${highlight(row.desc)}</td>
+        <td class="desc collapsed" onclick="toggleDesc(this)">
+          ${highlight(row.desc)}
+        </td>
         <td>
           <span class="mlfb-link" onclick="copyMLFB('${row.part}')">
             ${row.part}
@@ -600,6 +621,16 @@ fetch("stock.csv")
       .toLowerCase()
       .replace(/\s+/g, "")
       .replace(/-/g, "");
+  }
+
+  function toggleDesc(td) {
+    if (td.classList.contains("collapsed")) {
+      td.classList.remove("collapsed");
+      td.classList.add("expanded");
+    } else {
+      td.classList.remove("expanded");
+      td.classList.add("collapsed");
+    }
   }
 
 
