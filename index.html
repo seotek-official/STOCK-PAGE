@@ -70,15 +70,7 @@
     text-overflow: ellipsis;
     cursor: pointer;
   }
-
-  td.desc.collapsed {
-    white-space: nowrap;
-  }
-
-  td.desc.expanded {
-    white-space: normal;
-  }
-
+  
   .logo {
     height: 100px;
     object-fit: contain;
@@ -239,13 +231,7 @@
   td.desc.expanded .desc-text {
     white-space: normal;
   }
-
-  .desc-toggle {
-    margin-left: 6px;
-    font-size: 12px;
-    color: #9ca3af;
-  }
-
+ 
 
 </style>
 </head>
@@ -372,9 +358,7 @@ fetch("stock.csv")
       tr.innerHTML = `
         <td class="desc collapsed" onclick="toggleDesc(this)">
           <span class="desc-text">${row.desc}</span>
-          <span class="desc-toggle" style="display:none;">▸</span>
-
-        </td>
+          </td>
         <td>
           <span class="mlfb-link" onclick="copyMLFB('${row.part}')">
             ${row.part}
@@ -385,21 +369,6 @@ fetch("stock.csv")
         </td>
       `;
       tbody.appendChild(tr);
-    });
-    updateDescToggles();
-  }
-
-  function updateDescToggles() {
-    document.querySelectorAll("td.desc").forEach(td => {
-      const text = td.querySelector(".desc-text");
-      const toggle = td.querySelector(".desc-toggle");
-
-       if (text.scrollWidth > text.clientWidth) {
-        toggle.style.display = "inline";
-      } else {
-        toggle.style.display = "none";
-        td.classList.remove("collapsed", "expanded");
-      }
     });
   }
 
@@ -654,21 +623,15 @@ fetch("stock.csv")
   }
 
   function toggleDesc(td) {
-    const toggle = td.querySelector(".desc-toggle");
-
-    if (toggle.style.display === "none") return;
-
     if (td.classList.contains("collapsed")) {
       td.classList.remove("collapsed");
       td.classList.add("expanded");
-      toggle.textContent = "▾";
-
     } else {
       td.classList.remove("expanded");
       td.classList.add("collapsed");
-      toggle.textContent = "▸";
     }
   }
+
 
 
 </script>
