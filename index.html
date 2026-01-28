@@ -326,8 +326,10 @@ fetch("stock.csv")
     const lines = text.trim().split("\n");
 
     let 기준일 = "-";
-    if (lines[0].startsWith("#DATE=")) {
-      기준일 = lines[0].replace("#DATE=", "").trim();
+
+    const firstLine = lines[0].replace(/\uFEFF/g, "");
+    if (firstLine.trim().startsWith("#DATE=")) {
+      기준일 = firstLine.replace("#DATE=", "").trim();
       lines.shift();
     }
 
@@ -335,8 +337,6 @@ fetch("stock.csv")
       `데이터 기준일: ${기준일}`;
 
     const rows = lines.slice(1);
-
-    const rows = text.trim().split("\n").slice(1);
 
     allRows = rows.map(row => {
        const cols = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
