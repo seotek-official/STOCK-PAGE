@@ -632,6 +632,18 @@ fetch("stock.csv")
     }
   }
 
+  const lines = text.trim().split("\n");
+
+  let 기준일 = "-";
+  if (lines[0].startsWith("#DATE=")) {
+    기준일 = lines[0].replace("#DATE=", "").trim();
+    lines.shift();
+  }
+
+  document.getElementById("update-info").textContent =
+    `데이터 기준일: ${기준일}`;
+
+const rows = lines.slice(1);
 
 
 </script>
