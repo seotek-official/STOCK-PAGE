@@ -233,6 +233,10 @@
     white-space: normal;
   }
  
+  .mobile-list {
+    display: none;
+  }
+
 @media (max-width: 768px) {
 
   body {
@@ -415,7 +419,7 @@ let currentPage = 1;    //
 
 document.getElementById("searchBtn").disabled = true;
 
-fetch("stock.csv")
+fetch("stock.csv?v=20260130")
   .then(res => res.text())
   .then(text => {
 
