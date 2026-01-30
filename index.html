@@ -753,7 +753,7 @@ fetch("stock.csv")
       div.className = "mobile-card";
       div.innerHTML = `
         <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
-          ${highlight(row.desc)}
+          ${highlight(row.desc.slice(0, 40))}...
           <span class="toggle-icon">▼</span>
         </div>
 
@@ -769,6 +769,7 @@ fetch("stock.csv")
           ${statusText(row.status)}
         </div>
       `;
+
       container.appendChild(div);
     });
   }
