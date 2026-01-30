@@ -370,7 +370,7 @@ fetch("stock.csv")
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td class="desc collapsed" onclick="toggleDesc(this)">
-          <span class="desc-text">${row.desc}</span>
+          <span class="desc-text">${highlight(row.desc)}</span>
           </td>
         <td>
           <span class="mlfb-link" onclick="copyMLFB('${row.part}')">
