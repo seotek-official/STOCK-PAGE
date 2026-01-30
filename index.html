@@ -232,6 +232,70 @@
     white-space: normal;
   }
  
+@media (max-width: 768px) {
+
+  body {
+    margin: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .logo {
+    height: 60px;
+    margin-top: 0;
+  }
+
+  table, thead {
+    display: none;
+  }
+
+  .mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .mobile-desc {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .mobile-mlfb {
+    font-size: 14px;
+    color: #2563eb;
+    font-weight: 500;
+    margin-bottom: 6px;
+    word-break: break-all;
+  }
+
+  .mobile-status {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .mlfb-link,
+  .mobile-mlfb,
+  .status-A,
+  .status-B,
+  .status-C {
+    display: inline-block;
+    padding: 8px 0;
+  }
+}
+
 
 </style>
 </head>
@@ -309,6 +373,7 @@
 <div id="result-info"></div>
 <div id="pagination"></div>
 
+<div id="mobile-list" class="mobile-list"></div>
 
 <script>
 let allRows = [];        //
@@ -422,6 +487,7 @@ fetch("stock.csv")
         currentPage = num;
         renderTable();
         renderPagination();
+        renderMobileList();
       };
       return btn;
     }
@@ -529,6 +595,7 @@ fetch("stock.csv")
   renderTable();
   renderPagination();
   renderResultInfo();
+  renderMobileList();
 });
 
   document.getElementById("search").addEventListener("input", function () {
@@ -560,6 +627,7 @@ fetch("stock.csv")
     currentPage = 1;
     renderTable();
     renderPagination();
+    renderMobileList();
   });
 
 
@@ -645,6 +713,30 @@ fetch("stock.csv")
     }
   }
 
+  function renderMobileList() {
+    const container = document.getElementById("mobile-list");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const start = (currentPage - 1) * rowsPerPage;
+    const pageRows = filteredRows.slice(start, start + rowsPerPage);
+
+    pageRows.forEach(row => {
+      const div = document.createElement("div");
+      div.className = "mobile-card";
+      div.innerHTML = `
+        <div class="mobile-desc">${highlight(row.desc)}</div>
+        <div class="mobile-mlfb" onclick="copyMLFB('${row.part}')">
+          ${highlight(row.part)}
+        </div>
+        <div class="mobile-status status-${row.status}" onclick="openModal()">
+          ${statusText(row.status)}
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  }
 
 
 </script>
