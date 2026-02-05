@@ -461,16 +461,17 @@ fetch("stock.csv?v=20260130")
     const rows = lines.slice(1);
 
     allRows = rows.map(row => {
-       const cols = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+       const cols = row.split(",").map(v => v.replace(/"/g, "").trim());
+
        if (!cols || cols.length < 3) return null;
 
        return {
-         desc: cols[0].replace(/"/g, "").trim(),
-         part: cols[1].replace(/"/g, "").trim(),
-         status: cols[2].replace(/"/g, "").trim().toUpperCase(),
-         price: cols[3] ? cols[3].replace(/"/g, "").trim() : ""
+         desc: cols[0] || "",
+         part: cols[1] || "",
+         status: (cols[2] || "").toUpperCase(),
+         price: cols[3] || ""
        };
-    }).filter(Boolean);
+     }).filter(row => row.desc || row.part);
 
   console.log(allRows);
 
@@ -490,7 +491,12 @@ fetch("stock.csv?v=20260130")
       tr.innerHTML = `
         <td class="desc collapsed" onclick="toggleDesc(this, '${row.price}')">
           <span class="desc-text">
-            ${row.price ? '<span class="special-tag">🔥 특가 진행중</span> ' : ''}
+            ${row.price ? `
+              <span class="special-tag"
+                    onclick="openPriceModal('${row.price}'); event.stopPropagation();">
+                🔥 특가 진행중
+              </span>
+            ` : ''}
             ${highlight(row.desc)}
           </span>
         </td>
