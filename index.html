@@ -458,12 +458,13 @@ fetch("stock.csv?v=20260130")
     document.getElementById("update-info").textContent =
       `데이터 기준일: ${기준일}`;
 
-    const rows = lines.slice(1);
+    const cleanedLines = lines.filter(line => line.trim() !== "");
+    const rows = cleanedLines.slice(1);
 
     allRows = rows.map(row => {
        const cols = row.split("\t").map(v => v.trim());
 
-       if (!cols || cols.length < 3) return null;
+       if (!cols || cols.length < 2) return null;
 
        return {
          desc: cols[0] || "",
@@ -471,13 +472,14 @@ fetch("stock.csv?v=20260130")
          status: (cols[2] || "").toUpperCase(),
          price: cols[3] || ""
        };
-     }).filter(row => row.desc || row.part);
+     }).filter(row => row.part);
 
   console.log(allRows);
 
-  filteredRows = [];
-  renderResultInfo();
-  });
+  filteredRows = allRows;
+  renderTable();
+  renderMobileList();
+});
 
   function renderTable() {
     const tbody = document.getElementById("table-body");
