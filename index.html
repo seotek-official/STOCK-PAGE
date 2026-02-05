@@ -461,7 +461,7 @@ fetch("stock.csv?v=20260130")
     const rows = lines.slice(1);
 
     allRows = rows.map(row => {
-       const cols = row.split(",").map(v => v.replace(/"/g, "").trim());
+       const cols = row.split("\t").map(v => v.replace(/"/g, "").trim());
 
        if (!cols || cols.length < 3) return null;
 
@@ -489,7 +489,7 @@ fetch("stock.csv?v=20260130")
     pageRows.forEach(row => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td class="desc collapsed" onclick="toggleDesc(this, '${row.price}')">
+        <td class="desc collapsed" onclick="toggleDesc(this)">
           <span class="desc-text">
             ${row.price ? `
               <span class="special-tag"
@@ -814,14 +814,6 @@ fetch("stock.csv?v=20260130")
   function toggleMobileDesc(el) {
     const card = el.closest(".mobile-card");
     card.classList.toggle("open");
-  }
-
-  function handleDescClick(td, price) {
-    toggleDesc(td);
-
-    if (price) {
-      openPriceModal(price);
-    }
   }
 
   function openPriceModal(price) {
