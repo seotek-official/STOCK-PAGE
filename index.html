@@ -462,7 +462,8 @@ fetch("stock.csv?v=20260130")
     const rows = cleanedLines.slice(1);
 
     allRows = rows.map(row => {
-       const cols = row.split("\t").map(v => v.trim());
+       const delimiter = row.includes("\t") ? "\t" : ",";
+       const cols = row.split(delimiter).map(v => v.trim());
 
        if (!cols || cols.length < 2) return null;
 
@@ -555,6 +556,7 @@ fetch("stock.csv?v=20260130")
         currentPage = num;
         renderTable();
         renderPagination();
+        renderResultInfo();
         renderMobileList();
       };
       return btn;
@@ -698,12 +700,14 @@ fetch("stock.csv?v=20260130")
     renderMobileList();
   });
 
-
+  function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
 
   function highlight(text) {
     if (!searchKeyword) return text;
-
-    const regex = new RegExp(`(${searchKeyword})`, "gi");
+    const safe = escapeRegExp(searchKeyword);
+    const regex = new RegExp(`(${safe})`, "gi");
     return text.replace(regex, "<mark>$1</mark>");
   };
 
@@ -795,8 +799,11 @@ fetch("stock.csv?v=20260130")
       div.className = "mobile-card";
       div.innerHTML = `
         <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
-          ${highlight(row.desc.slice(0, 40))}...
-          <span class="toggle-icon">▼</span>
+          ${highlight(
+            row.desc.slice(0, 40))}...
+            ? row.desc.slice(0, 40) + "…"
+            : row.desc
+          )}
         </div>
 
         <div class="mobile-desc-content">
@@ -836,6 +843,7 @@ fetch("stock.csv?v=20260130")
 
   priceModal.addEventListener("click", closePriceModal);
   priceModalContent.addEventListener("click", e => e.stopPropagation());
+
 
 
 
