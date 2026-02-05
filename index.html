@@ -5,179 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stock Inquiry</title>
   <style>
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 14px 16px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .search-box {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    .search-box input {
-      flex: 1;
-    }
-    .search-box button {
-      padding: 0 20px;
-      font-size: 16px;
-      border: 1px solid #2563eb;
-      background: #2563eb;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .search-box button:hover {
-      background: #1e4fd8;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;      
-      table-layout: fixed;
-    }
-    .col-desc { width: 50%; }
-    .col-mlfb { width: 30%; }
-    .col-status  { width: 20%; }
-
-    th {
-      background: #f5f7fa;
-      font-weight: 600;
-      text-align: left;
-      padding: 12px;
-      border-bottom: 2px solid #ddd;
-    }
-
-    td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #eee;
-    }
-    td.desc {
-      max-width: 600px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      cursor: pointer;
-    }
-    
-    .logo {
-      height: 100px;
-      object-fit: contain;
-      margin-top: 20px;
-    }  
-    #pagination {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    #pagination button {
-      padding: 6px 12px;
-      border: 1px solid  #ccc;
-      background: white;
-      cursor: pointer;
-      border-radius: 4px;
-      margin: 0 2px;
-    }
-
-    #pagination button.active {
-      background: #2c7be5;
-      color: white;
-      font-weight: bold;
-      border-color: #2c7be5;
-    }
-
-    #pagination button:hover:not(:disabled) {
-      background: #eee;
-    }
-
-    #result-info {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #555;
-      text-align: right;
-    }
-    mark {
-      background-color: #fff3a0;
-      padding: 0 2px;
-    }
+    .header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; }
+    input[type="text"] { width: 100%; padding: 14px 16px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
+    .search-box { display: flex; gap: 8px; margin-bottom: 16px; }
+    .search-box input { flex: 1; }
+    .search-box button { padding: 0 20px; font-size: 16px; border: 1px solid #2563eb; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
+    .search-box button:hover { background: #1e4fd8; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .col-desc { width: 50%; } .col-mlfb { width: 30%; } .col-status  { width: 20%; }
+    th { background: #f5f7fa; font-weight: 600; text-align: left; padding: 12px; border-bottom: 2px solid #ddd; }
+    td { padding: 10px 12px; border-bottom: 1px solid #eee; word-break: break-all; }
+    td.desc { max-width: 600px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    td.desc.expanded { white-space: normal; }
+    .logo { height: 100px; object-fit: contain; margin-top: 20px; }  
+    #pagination { margin-top: 20px; text-align: center; }
+    #pagination button { padding: 6px 12px; border: 1px solid #ccc; background: white; cursor: pointer; border-radius: 4px; margin: 0 2px; }
+    #pagination button.active { background: #2c7be5; color: white; font-weight: bold; border-color: #2c7be5; }
+    #pagination button:disabled { cursor: default; opacity: 0.5; }
+    #result-info { margin-top: 12px; font-size: 14px; color: #555; text-align: right; }
+    mark { background-color: #fff3a0; padding: 0 2px; }
     .status-A { color: #16a34a; font-weight: 600; cursor: pointer; }
     .status-B { color: #f59e0b; font-weight: 600; cursor: pointer; }
     .status-C { color: #6b7280; font-weight: 600; cursor: pointer; }
-
-    #contactModal, #priceModal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background: white;
-      padding: 24px;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-    }
-
-    .modal-content button {
-      margin-top: 16px;
-      padding: 8px 16px;
-      border: none;
-      background: #2563eb;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .info-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .contact-link {
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: 600;
-      color: #2563eb;
-    }
-
-    .mlfb-link {
-      color: #2563eb;
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    .desc-text {
-      display: inline-block;
-      max-width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      vertical-align: middle;
-    }
-
-    td.desc.expanded .desc-text {
-      white-space: normal;
-    }
-   
+    #contactModal, #priceModal { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; z-index: 1000; }
+    .modal-content { background: white; padding: 24px; border-radius: 10px; width: 320px; text-align: center; }
+    .modal-content button { margin-top: 16px; padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
+    .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
+    .mlfb-link { color: #2563eb; text-decoration: underline; cursor: pointer; font-weight: 500; }
+    .special-tag { color: #dc2626; font-weight: 700; margin-right: 6px; cursor: pointer; }
     .mobile-list { display: none; }
 
     @media (max-width: 768px) {
@@ -186,29 +43,10 @@
       .logo { height: 60px; margin-top: 0; }
       table { display: none !important; }
       .mobile-list { display: flex; flex-direction: column; gap: 12px; }
-      .mobile-card {
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 14px;
-        background: #fff;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      }
-      .mobile-desc-title {
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 6px;
-        cursor: pointer;
-      }
+      .mobile-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; }
+      .mobile-desc-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; cursor: pointer; }
       .mobile-desc-content { display: none; font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
       .mobile-card.open .mobile-desc-content { display: block; }
-      .mobile-mlfb { color: #2563eb; margin-bottom: 6px; font-size: 14px; }
-    }
-
-    .special-tag {
-      color: #dc2626;
-      font-weight: 700;
-      margin-right: 6px;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -236,16 +74,17 @@
     <p>아래 연락처로 문의 바랍니다.</p>
     <p>
       📞 <a href="tel:0552554360" style="font-weight:600; color:#000; text-decoration:none;">055-255-4360</a><br><br>
-      ✉️ <a href="http://pf.kakao.com/_AtwAX" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:none;">카카오톡 채널 "주식회사 서오"</a>
+      ✉️ <a href="http://pf.kakao.com/_AtwAX" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:none;">카카오톡 채널 "주식회사 서오"</a><br>
+      <a href="http://pf.kakao.com/_AtwAX/chat" target="_blank" style="font-size:14px; color:#555; text-decoration:underline;">(채팅문의 바로가기 "click")</a>
     </p>
     <button onclick="closeModal()">닫기</button>
   </div>
-</div>  
+</div>
 
 <div id="priceModal">
   <div class="modal-content">
     <h3>특가 안내</h3>
-    <p id="price-display" style="font-size:18px;font-weight:700;"></p>
+    <p id="price-display" style="font-size:18px;font-weight:700; color:#dc2626;"></p>
     <button onclick="closePriceModal()">닫기</button>
   </div>
 </div>
@@ -277,13 +116,12 @@
 <div id="mobile-list" class="mobile-list"></div>
 
 <script>
-let allRows = [];        // 전체 데이터
-let filteredRows = [];   // 검색된 데이터
-let searchKeyword = "";  // 검색어
-const rowsPerPage = 30;  // 페이지당 개수
-let currentPage = 1;     // 현재 페이지
+let allRows = [];        
+let filteredRows = [];   
+let searchKeyword = "";  
+const rowsPerPage = 30;  
+let currentPage = 1;     
 
-// 데이터 로드
 fetch("stock.csv?v=20260130")
   .then(res => res.text())
   .then(text => {
@@ -295,15 +133,22 @@ fetch("stock.csv?v=20260130")
       lines.shift();
     }
     document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
+
     const dataLines = lines.filter(line => line.trim() !== "").slice(1);
     allRows = dataLines.map(row => {
-      const delimiter = row.includes("\t") ? "\t" : ",";
-      const cols = row.split(delimiter).map(v => v.trim());
-      if (cols.length < 2) return null;
-      return { desc: cols[0] || "", part: cols[1] || "", status: (cols[2] || "").toUpperCase(), price: cols[3] || "" };
+      // 쉼표로 칸을 나누되, 따옴표 안의 쉼표는 무시하는 정규식
+      const cols = row.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+      const cleanCols = cols.map(v => v.replace(/^"|"$/g, '').trim());
+
+      if (cleanCols.length < 2) return null;
+      return {
+        desc: cleanCols[0] || "",
+        part: cleanCols[1] || "",
+        status: (cleanCols[2] || "").toUpperCase(),
+        price: cleanCols[3] || ""
+      };
     }).filter(row => row && row.part);
 
-    // 초기 로딩 시에는 filteredRows를 비워둡니다 (검색 전 결과 안 나오게)
     filteredRows = [];
     updateView();
   });
@@ -315,7 +160,6 @@ function updateView() {
   renderMobileList();
 }
 
-// 테이블 렌더링
 function renderTable() {
   const tbody = document.getElementById("table-body");
   tbody.innerHTML = "";
@@ -328,10 +172,8 @@ function renderTable() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td class="desc" onclick="toggleDesc(this)">
-        <span class="desc-text">
-          ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 특가</span>` : ''}
-          ${highlight(row.desc)}
-        </span>
+        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 특가</span>` : ''}
+        ${highlight(row.desc)}
       </td>
       <td><span class="mlfb-link" onclick="copyMLFB('${row.part}')">${highlight(row.part)}</span></td>
       <td class="status-${row.status}" onclick="openModal()">${statusText(row.status)}</td>
@@ -340,7 +182,6 @@ function renderTable() {
   });
 }
 
-// 모바일 리스트 렌더링
 function renderMobileList() {
   const container = document.getElementById("mobile-list");
   container.innerHTML = "";
@@ -366,37 +207,30 @@ function renderMobileList() {
   });
 }
 
-// 페이지네이션 (원복 버전)
 function renderPagination() {
   const container = document.getElementById("pagination");
   container.innerHTML = "";
   if (filteredRows.length === 0) return;
 
   const pageCount = Math.ceil(filteredRows.length / rowsPerPage);
-  const maxButtons = 5;
-  let startPage = Math.max(1, currentPage - 2);
-  let endPage = Math.min(pageCount, startPage + maxButtons - 1);
-
-  if (endPage - startPage + 1 < maxButtons) {
-    startPage = Math.max(1, endPage - maxButtons + 1);
-  }
-
-  // 처음 버튼
+  
   const firstBtn = document.createElement("button");
   firstBtn.textContent = "<< 처음";
   firstBtn.disabled = currentPage === 1;
   firstBtn.onclick = () => { currentPage = 1; updateView(); };
   container.appendChild(firstBtn);
 
-  // 이전 버튼
   const prevBtn = document.createElement("button");
   prevBtn.textContent = "< 이전";
   prevBtn.disabled = currentPage === 1;
   prevBtn.onclick = () => { currentPage--; updateView(); };
   container.appendChild(prevBtn);
 
-  // 숫자 버튼
-  for (let i = startPage; i <= endPage; i++) {
+  let start = Math.max(1, currentPage - 2);
+  let end = Math.min(pageCount, start + 4);
+  if (end - start < 4) start = Math.max(1, end - 4);
+
+  for (let i = start; i <= end; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
     if (i === currentPage) btn.classList.add("active");
@@ -404,14 +238,12 @@ function renderPagination() {
     container.appendChild(btn);
   }
 
-  // 다음 버튼
   const nextBtn = document.createElement("button");
   nextBtn.textContent = "다음 >";
   nextBtn.disabled = currentPage === pageCount;
   nextBtn.onclick = () => { currentPage++; updateView(); };
   container.appendChild(nextBtn);
 
-  // 끝 버튼
   const lastBtn = document.createElement("button");
   lastBtn.textContent = "끝 >>";
   lastBtn.disabled = currentPage === pageCount;
@@ -419,23 +251,16 @@ function renderPagination() {
   container.appendChild(lastBtn);
 }
 
-// 검색 로직
 document.getElementById("searchBtn").addEventListener("click", () => {
   const value = document.getElementById("search").value.trim().toLowerCase();
   searchKeyword = value;
-  if (value.length < 2) {
-    alert("검색어는 2글자 이상 입력해주세요.");
-    return;
-  }
-  filteredRows = allRows.filter(row => 
-    normalize(row.desc).includes(normalize(value)) || normalize(row.part).includes(normalize(value))
-  );
+  if (value.length < 2) { alert("검색어는 2글자 이상 입력해주세요."); return; }
+  filteredRows = allRows.filter(row => normalize(row.desc).includes(normalize(value)) || normalize(row.part).includes(normalize(value)));
   currentPage = 1;
   applySort();
   updateView();
 });
 
-// 엔터키 지원 및 정렬
 document.getElementById("search").addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("searchBtn").click(); });
 document.getElementById("sortSelect").addEventListener("change", () => { applySort(); currentPage = 1; updateView(); });
 
@@ -450,18 +275,11 @@ function applySort() {
 
 function renderResultInfo() {
   const info = document.getElementById("result-info");
-  if (filteredRows.length === 0) {
-    info.textContent = searchKeyword ? "검색 결과가 없습니다." : "검색어를 입력해주세요.";
-    return;
-  }
+  if (filteredRows.length === 0) { info.textContent = searchKeyword ? "검색 결과가 없습니다." : "검색어를 입력해주세요."; return; }
   info.textContent = `총 ${filteredRows.length}건 검색됨 (${currentPage}페이지)`;
 }
 
-function highlight(text) {
-  if (!searchKeyword) return text;
-  const regex = new RegExp(`(${searchKeyword})`, "gi");
-  return text.replace(regex, "<mark>$1</mark>");
-}
+function highlight(text) { if (!searchKeyword) return text; const regex = new RegExp(`(${searchKeyword})`, "gi"); return text.replace(regex, "<mark>$1</mark>"); }
 function normalize(text) { return text.toLowerCase().replace(/[\s-]/g, ""); }
 function statusText(code) { const texts = { "A": "즉시 출고", "B": "재고 보유(문의)", "C": "확인 필요" }; return texts[code] || "-"; }
 function toggleDesc(td) { td.classList.toggle("expanded"); }
@@ -470,7 +288,8 @@ function copyMLFB(text) { navigator.clipboard.writeText(text); alert("복사되�
 function openModal() { document.getElementById("contactModal").style.display = "flex"; }
 function closeModal() { document.getElementById("contactModal").style.display = "none"; }
 function openPriceModal(price) {
-  document.getElementById("price-display").textContent = `💰 ${Number(price).toLocaleString()} 원`;
+  const cleanPrice = price.replace(/[^0-9]/g, '');
+  document.getElementById("price-display").textContent = `💰 ${Number(cleanPrice).toLocaleString()} 원`;
   document.getElementById("priceModal").style.display = "flex";
 }
 function closePriceModal() { document.getElementById("priceModal").style.display = "none"; }
