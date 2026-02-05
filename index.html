@@ -23,323 +23,194 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-  .search-box {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-  .search-box input {
-    flex: 1;
-  }
-  .search-box button {
-    padding: 0 20px;
-    font-size: 16px;
-    border: 1px solid #2563eb;
-    background: #2563eb;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .search-box button:hover {
-    background: #1e4fd8;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;      
-    table-layout: fixed;
-  }
-      .col-desc { width: 50%; }
-      .col-mlfb { width: 30%; }
-      .col-status  { width: 20%; }
+    .search-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .search-box input {
+      flex: 1;
+    }
+    .search-box button {
+      padding: 0 20px;
+      font-size: 16px;
+      border: 1px solid #2563eb;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .search-box button:hover {
+      background: #1e4fd8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;      
+      table-layout: fixed;
+    }
+    .col-desc { width: 50%; }
+    .col-mlfb { width: 30%; }
+    .col-status  { width: 20%; }
 
-  th {
+    th {
       background: #f5f7fa;
       font-weight: 600;
       text-align: left;
       padding: 12px;
       border-bottom: 2px solid #ddd;
-  }
-
-  td {
-    padding: 10px 12px;
-    border-bottom: 1px solid #eee;
-  }
-  td.desc {
-    max-width: 600px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-  }
-  
-  .logo {
-    height: 100px;
-    object-fit: contain;
-    margin-top: 20px;
-  }  
-  #pagination {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  #pagination button {
-    padding: 6px 12px;
-    border: 1px solid  #ccc;
-    background: white;
-    cursor: pointer;
-    border-radius: 4px;
     }
 
-  #pagination button.active {
-    background: #2c7be5;
-    color: white;
-    font-weight: bold;
-    border-color: #2c7be5;
-  }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #eee;
+    }
+    td.desc {
+      max-width: 600px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+    
+    .logo {
+      height: 100px;
+      object-fit: contain;
+      margin-top: 20px;
+    }  
+    #pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-  #pagination button:hover {
-    background: #eee;
-  }
+    #pagination button {
+      padding: 6px 12px;
+      border: 1px solid  #ccc;
+      background: white;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 0 2px;
+    }
 
-  #result-info {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #555;
-    text-align: right;
-  }
-  mark {
-    background-color: #fff3a0;
-    padding: 0 2px;
-  }
-  .status-A {
-    color: #16a34a;
-    font-weight: 600;
-    cursor: pointer;
-  }
+    #pagination button.active {
+      background: #2c7be5;
+      color: white;
+      font-weight: bold;
+      border-color: #2c7be5;
+    }
 
-  .status-B {
-    color: #f59e0b;
-    font-weight: 600;
-    cursor: pointer;
-  }
+    #pagination button:hover:not(:disabled) {
+      background: #eee;
+    }
 
-  .status-C {
-    color: #6b7280;
-    font-weight: 600;
-    cursor: pointer;
-  }
+    #result-info {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #555;
+      text-align: right;
+    }
+    mark {
+      background-color: #fff3a0;
+      padding: 0 2px;
+    }
+    .status-A { color: #16a34a; font-weight: 600; cursor: pointer; }
+    .status-B { color: #f59e0b; font-weight: 600; cursor: pointer; }
+    .status-C { color: #6b7280; font-weight: 600; cursor: pointer; }
 
-  #contactModal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
+    #contactModal, #priceModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
-  .modal-content {
-    background: white;
-    padding: 24px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-  }
+    .modal-content {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
 
-  .modal-content button {
-    margin-top: 16px;
-    padding: 8px 16px;
-    border: none;
-    background: #2563eb;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+    .modal-content button {
+      margin-top: 16px;
+      padding: 8px 16px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-  .info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-  }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
 
-  .contact-link {
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: 600;
-    color: #2563eb;
-  }
-  .contact-link:hover {
-    opacity: 0.8;
-  }
+    .contact-link {
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 600;
+      color: #2563eb;
+    }
 
-  .copy-btn {
-    margin-left: 6px;
-    padding: 2px 6px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    background: #f9fafb;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+    .mlfb-link {
+      color: #2563eb;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+    }
 
-  .copy-btn:hover {
-    background: #e5e7eb;
-  }
+    .desc-text {
+      display: inline-block;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
 
-  .mlfb-text {
-    font-weight: 500;
-  }
+    td.desc.expanded .desc-text {
+      white-space: normal;
+    }
+   
+    .mobile-list { display: none; }
 
-  .copy-icon {
-    margin-left: 8px;
-    font-size: 12px;
-    color: #6b7280;
-    cursor: pointer;
-    user-select: none;
-  }
+    @media (max-width: 768px) {
+      body { margin: 16px; }
+      .header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .logo { height: 60px; margin-top: 0; }
+      table { display: none !important; }
+      .mobile-list { display: flex; flex-direction: column; gap: 12px; }
+      .mobile-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 14px;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      }
+      .mobile-desc-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        cursor: pointer;
+      }
+      .mobile-desc-content { display: none; font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+      .mobile-card.open .mobile-desc-content { display: block; }
+      .mobile-mlfb { color: #2563eb; margin-bottom: 6px; font-size: 14px; }
+    }
 
-  .copy-icon:hover {
-    color: #2563eb;
-    text-decoration: underline;
-  }
-
-  .mlfb-link {
-    color: #2563eb;
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .mlfb-link:hover {
-    opacity: 0.85;
-  }
-
-  td.desc {
-    cursor: pointer;
-  }
-
-  .desc-text {
-    display: inline-block;
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: middle;
-  }
-
-  td.desc.expanded .desc-text {
-    white-space: normal;
-  }
- 
-  .mobile-list {
-    display: none;
-  }
-
-@media (max-width: 768px) {
-
-  body {
-    margin: 16px;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .logo {
-    height: 60px;
-    margin-top: 0;
-  }
-
-  table {
-    display: none !important;
-  }
-  
-  .mobile-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .mobile-card {
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 14px;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-
-  .mobile-desc {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-
-  .mobile-mlfb {
-    font-size: 14px;
-    color: #2563eb;
-    font-weight: 500;
-    margin-bottom: 6px;
-    word-break: break-all;
-  }
-
-  .mobile-status {
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .mlfb-link,
-  .mobile-mlfb,
-  .status-A,
-  .status-B,
-  .status-C {
-    display: inline-block;
-    padding: 8px 0;
-  }
-
-  .mobile-desc-content {
-    display: none;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-
-  .mobile-card.open .mobile-desc-content {
-    display: block;
-  }
-
-  .mobile-desc-title {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .toggle-icon {
-    font-size: 12px;
-    transition: transform 0.25s ease;
-  }
-
-  .mobile-card.open .toggle-icon {
-    transform: rotate(180deg);
-  }
-}
-
-  .special-tag {
-    color: #dc2626;
-    font-weight: 700;
-    margin-right: 6px;
-  }
-
-
-
-</style>
+    .special-tag {
+      color: #dc2626;
+      font-weight: 700;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -347,7 +218,7 @@
   <h2>서오 재고 조회</h2>
   <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
 </div>
-  <p>찾으시는 제품 [ ex) CPU, Digital input... ] 또는 MLFB를 입력하세요</p>
+<p>찾으시는 제품 [ ex) CPU, 1515... ] 또는 MLFB를 입력하세요</p>
 
 <div class="search-box">
   <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
@@ -356,54 +227,31 @@
 
 <p style="font-size:13px;color:#777;margin-bottom:12px;">
   ※ 안내: 본 정보는 실제와 다를 수 있으며, 자세한 사항은 
-  <span class="contact-link" onclick="openModal()">문의</span>
-  바랍니다.
+  <span class="contact-link" onclick="openModal()">문의</span> 바랍니다.
 </p>
 
-
-<div id ="contactModal" style="display:none;">
+<div id="contactModal">
   <div class="modal-content">
     <h3>문의 안내</h3>
     <p>아래 연락처로 문의 바랍니다.</p>
     <p>
-      📞
-      <a href="tel:0552554360"
-           style="font-weight:600; color:#000; text-decoration:none;">
-          055-255-4360
-      </a><br>
-      ✉️ 
-      <a href="http://pf.kakao.com/_AtwAX"
-           target="_blank"
-           style="color:#2563eb; font-weight:600; text-decoration:none;">
-          카카오톡 채널 "주식회사 서오"
-      </a><br>
-
-      <a href="http://pf.kakao.com/_AtwAX/chat"
-           target="_blank"
-           style="font-size:14px; color:#555;">
-          (채팅문의 바로가기 "click")
-    </a>
+      📞 <a href="tel:0552554360" style="font-weight:600; color:#000; text-decoration:none;">055-255-4360</a><br><br>
+      ✉️ <a href="http://pf.kakao.com/_AtwAX" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:none;">카카오톡 채널 "주식회사 서오"</a>
     </p>
     <button onclick="closeModal()">닫기</button>
   </div>
 </div>  
 
-<div id="priceModal" style="display:none;">
+<div id="priceModal">
   <div class="modal-content">
     <h3>특가 안내</h3>
-    <p style="font-size:18px;font-weight:700;">
-      💰 ${price} 원
-    </p>
+    <p id="price-display" style="font-size:18px;font-weight:700;"></p>
     <button onclick="closePriceModal()">닫기</button>
   </div>
 </div>
 
-
 <div class="info-row">
-  <div id="update-info" style="font-size:13px;color:#666;margin-bottom:8px;">
-    데이터 기준일: -
-  </div>
-
+  <div id="update-info" style="font-size:13px;color:#666;">데이터 기준일: -</div>
   <div class="sort-box">
     <select id="sortSelect">
       <option value="">정렬 없음</option>
@@ -423,431 +271,212 @@
   </thead>
   <tbody id="table-body"></tbody>
 </table>
+
 <div id="result-info"></div>
 <div id="pagination"></div>
-
 <div id="mobile-list" class="mobile-list"></div>
 
 <script>
-let allRows = [];        //
-let filteredRows = [];  //
-let searchKeyword = ""; //
-const rowsPerPage = 30; //
-let currentPage = 1;    //
+let allRows = [];        
+let filteredRows = [];  
+let searchKeyword = ""; 
+const rowsPerPage = 30; 
+let currentPage = 1;    
 
-document.getElementById("searchBtn").disabled = true;
-
+// 1. 데이터 로드
 fetch("stock.csv?v=20260130")
   .then(res => res.text())
   .then(text => {
-
     const lines = text.trim().split("\n");
+    let baseDate = "-";
 
-    let 기준일 = "-";
-
-    const firstLineRaw = lines[0];
-
-    const match = firstLineRaw.match(/#DATE=([^",\r\n]+)/);
-
-    if (match) {
-      기준일 = match[1]
-        .trim();
+    // 기준일 추출 (#DATE=... 형식 대응)
+    if (lines[0].includes("#DATE=")) {
+      const match = lines[0].match(/#DATE=([^",\r\n]+)/);
+      if (match) baseDate = match[1].trim();
       lines.shift();
     }
+    document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
 
-    document.getElementById("update-info").textContent =
-      `데이터 기준일: ${기준일}`;
+    // 데이터 파싱 (1번째 줄은 헤더로 간주하고 생략)
+    const dataLines = lines.filter(line => line.trim() !== "").slice(1);
+    allRows = dataLines.map(row => {
+      const delimiter = row.includes("\t") ? "\t" : ",";
+      const cols = row.split(delimiter).map(v => v.trim());
+      if (cols.length < 2) return null;
+      return {
+        desc: cols[0] || "",
+        part: cols[1] || "",
+        status: (cols[2] || "").toUpperCase(),
+        price: cols[3] || ""
+      };
+    }).filter(row => row && row.part);
 
-    const cleanedLines = lines.filter(line => line.trim() !== "");
-    const rows = cleanedLines.slice(1);
+    // 초기 상태: 전체 표시
+    filteredRows = allRows;
+    updateView();
+  });
 
-    allRows = rows.map(row => {
-       const delimiter = row.includes("\t") ? "\t" : ",";
-       const cols = row.split(delimiter).map(v => v.trim());
-
-       if (!cols || cols.length < 2) return null;
-
-       return {
-         desc: cols[0] || "",
-         part: cols[1] || "",
-         status: (cols[2] || "").toUpperCase(),
-         price: cols[3] || ""
-       };
-     }).filter(row => row.part);
-
-  console.log(allRows);
-
-  filteredRows = allRows;
-  currentPage = 1;
+function updateView() {
   renderTable();
   renderPagination();
   renderResultInfo();
   renderMobileList();
-});
-
-  function renderTable() {
-    const tbody = document.getElementById("table-body");
-    tbody.innerHTML = "";
-
-    const start = (currentPage - 1) * rowsPerPage;
-    const pageRows = filteredRows.slice(start, start + rowsPerPage);
-
-    pageRows.forEach(row => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td class="desc collapsed" onclick="toggleDesc(this)">
-          <span class="desc-text">
-            ${row.price ? `
-              <span class="special-tag"
-                    onclick="openPriceModal('${row.price}'); event.stopPropagation();">
-                🔥 특가 진행중
-              </span>
-            ` : ''}
-            ${highlight(row.desc)}
-          </span>
-        </td>
-        <td>
-          <span class="mlfb-link" onclick="copyMLFB('${row.part}')">
-            ${row.part}
-          </span>
-        </td>
-        <td class="status-${row.status}" onclick="openModal()">
-          ${statusText(row.status)}
-        </td>
-      `;
-      tbody.appendChild(tr);
-    });
-  }
-
-  function renderResultInfo() {
-    const info = document.getElementById("result-info");
-
-    if (!searchKeyword) {
-      info.textContent = "검색어를 입력하신 후 검색 버튼을 눌러주세요.";
-      return;
-    }
-
-    const total = filteredRows.length;
-    if (total === 0) {
-      info.textContent = "검색 결과가 없습니다.";
-      return;
-    }
-
-    const start = (currentPage - 1) * rowsPerPage + 1;
-    const end = Math.min(currentPage * rowsPerPage, total);
-    const pageCount = Math.ceil(total / rowsPerPage);
-
-    info.textContent = `총 ${total}건 중 ${start}–${end}번 표시 (${currentPage} / ${pageCount} 페이지)`;
-  }
-
-  function renderPagination() {
-    const pageCount = Math.ceil(filteredRows.length / rowsPerPage);
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = "";
-
-    const maxButtons = 7;
-    const sideButtons = Math.floor(maxButtons / 2);
-
-    function createPageButton(num) {
-      const btn = document.createElement("button");
-      btn.textContent = num;
-      if (num === currentPage) btn.classList.add("active");
-      btn.onclick = () => {
-        currentPage = num;
-        renderTable();
-        renderPagination();
-        renderResultInfo();
-        renderMobileList();
-      };
-      return btn;
-    }
-
-  function createDots() {
-    const span = document.createElement("span");
-    span.textContent = " ... ";
-    return span;
-  }
-
-  const firstBtn = document.createElement("button");
-  firstBtn.textContent = "<< 처음";
-  firstBtn.disabled = currentPage === 1;
-  firstBtn.onclick = () => { currentPage = 1; renderTable(); renderPagination(); };
-  pagination.appendChild(firstBtn);
-
-  const prevBtn = document.createElement("button");
-  prevBtn.textContent = "< 이전";
-  prevBtn.disabled = currentPage === 1;
-  prevBtn.onclick = () => { currentPage--; renderTable(); renderPagination(); };
-  pagination.appendChild(prevBtn);
-
-  let startPage = Math.max(1, currentPage - sideButtons);
-  let endPage = Math.min(pageCount, currentPage + sideButtons);
-
-  if (endPage - startPage + 1 < maxButtons) {
-    if (startPage === 1) {
-      endPage = Math.min(pageCount, startPage + maxButtons - 1);
-    } else if (endPage === pageCount) {
-      startPage = Math.max(1, endPage - maxButtons + 1);
-    }
-  }
-
-  if (startPage > 1) {
-    pagination.appendChild(createPageButton(1));
-    pagination.appendChild(createDots());
-  }
-
-  for (let i = startPage; i <= endPage; i++) {
-    pagination.appendChild(createPageButton(i));
-  }
-
-  if (endPage < pageCount) {
-    pagination.appendChild(createDots());
-    pagination.appendChild(createPageButton(pageCount));
-  }
-
-  const nextBtn = document.createElement("button");
-  nextBtn.textContent = "다음 >";
-  nextBtn.disabled = currentPage === pageCount;
-  nextBtn.onclick = () => { currentPage++; renderTable(); renderPagination(); };
-  pagination.appendChild(nextBtn);
-
-  const lastBtn = document.createElement("button");
-  lastBtn.textContent = "끝 >>";
-  lastBtn.disabled = currentPage === pageCount;
-  lastBtn.onclick = () => { currentPage = pageCount; renderTable(); renderPagination(); };
-  pagination.appendChild(lastBtn);
 }
 
-  document.getElementById("searchBtn").addEventListener("click", function () {
-    const value = document.getElementById("search").value.toLowerCase();
+// 테이블 렌더링
+function renderTable() {
+  const tbody = document.getElementById("table-body");
+  tbody.innerHTML = "";
+  const start = (currentPage - 1) * rowsPerPage;
+  const pageRows = filteredRows.slice(start, start + rowsPerPage);
 
-    if (!value || value.length < 2) {
-      filteredRows = [];
-      document.getElementById("result-info").textContent =
-        "검색어는 2글자 이상 입력해주세요.";
-      renderTable();
-      renderPagination();
-      return;
-    }
+  pageRows.forEach(row => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="desc" onclick="toggleDesc(this)">
+        <span class="desc-text">
+          ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 특가</span>` : ''}
+          ${highlight(row.desc)}
+        </span>
+      </td>
+      <td><span class="mlfb-link" onclick="copyMLFB('${row.part}')">${highlight(row.part)}</span></td>
+      <td class="status-${row.status}" onclick="openModal()">${statusText(row.status)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
 
-    searchKeyword = value;
+// 모바일 리스트 렌더링
+function renderMobileList() {
+  const container = document.getElementById("mobile-list");
+  container.innerHTML = "";
+  const start = (currentPage - 1) * rowsPerPage;
+  const pageRows = filteredRows.slice(start, start + rowsPerPage);
 
-    const statusPriority = { A: 3, B: 2, C: 1 };
-    const keyword = normalize(value);
+  pageRows.forEach(row => {
+    const div = document.createElement("div");
+    div.className = "mobile-card";
+    const shortDesc = row.desc.length > 40 ? row.desc.slice(0, 40) + "..." : row.desc;
+    div.innerHTML = `
+      <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
+        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 특가</span>` : ''}
+        ${highlight(shortDesc)}
+      </div>
+      <div class="mobile-desc-content">${highlight(row.desc)}</div>
+      <div class="mobile-mlfb" onclick="copyMLFB('${row.part}')">${highlight(row.part)}</div>
+      <div class="mobile-status status-${row.status}" onclick="openModal()">${statusText(row.status)}</div>
+    `;
+    container.appendChild(div);
+  });
+}
 
-    const matchedRows = allRows.filter(row => {
-      return (
-        normalize(row.desc).includes(keyword) ||
-        normalize(row.part).includes(keyword)
-      );
-    });
+// 검색 기능
+document.getElementById("searchBtn").addEventListener("click", () => {
+  const value = document.getElementById("search").value.trim().toLowerCase();
+  searchKeyword = value;
+  
+  if (value.length < 2 && value.length > 0) {
+    alert("검색어는 2글자 이상 입력해주세요.");
+    return;
+  }
 
-    const map = new Map();
-
-    matchedRows.forEach(row => {
-      const key = row.part;
-
-      if(!map.has(key)) {
-        map.set(key, row);
-      } else {
-        const existing = map.get(key);
-        if (statusPriority[row.status] > statusPriority[existing.status]) {
-          map.set(key, row);
-        }
-      }
-    });
-
-    filteredRows = Array.from(map.values());
-
-
-  applySort();
+  if (value === "") {
+    filteredRows = allRows;
+  } else {
+    filteredRows = allRows.filter(row => 
+      normalize(row.desc).includes(normalize(value)) || 
+      normalize(row.part).includes(normalize(value))
+    );
+  }
+  
   currentPage = 1;
-  renderTable();
-  renderPagination();
-  renderResultInfo();
-  renderMobileList();
+  applySort();
+  updateView();
 });
 
-  document.getElementById("search").addEventListener("input", function () {
-    const value = this.value.trim();
-    const info = document.getElementById("result-info");
-    const btn = document.getElementById("searchBtn");
+// 엔터키 검색
+document.getElementById("search").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") document.getElementById("searchBtn").click();
+});
 
-    if (value.length === 0) {
-      info.textContent = "";
-      btn.disabled = true;
-    } else if (value.length < 2) {
-      info.textContent = "검색어는 2글자 이상 입력해주세요.";
-      btn.disabled = true;
-    } else {
-      info.textContent = "";
-      btn.disabled = false;
-    }
-  });
+// 정렬 기능
+document.getElementById("sortSelect").addEventListener("change", () => {
+  applySort();
+  currentPage = 1;
+  updateView();
+});
 
-
-  document.getElementById("search").addEventListener("keydown", function (e) {
-    if (e.key === "Enter" && !document.getElementById("searchBtn").disabled) {
-      document.getElementById("searchBtn").click();
-    }
-  });
-
-  document.getElementById("sortSelect").addEventListener("change", function () {
-    applySort();
-    currentPage = 1;
-    renderTable();
-    renderPagination();
-    renderMobileList();
-  });
-
-  function escapeRegExp(text) {
-    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function applySort() {
+  const sortType = document.getElementById("sortSelect").value;
+  if (sortType === "mlfb") {
+    filteredRows.sort((a, b) => a.part.localeCompare(b.part));
+  } else if (sortType === "status") {
+    const order = { A: 1, B: 2, C: 3 };
+    filteredRows.sort((a, b) => (order[a.status] || 9) - (order[b.status] || 9));
   }
+}
 
-  function highlight(text) {
-    if (!searchKeyword) return text;
-    const safe = escapeRegExp(searchKeyword);
-    const regex = new RegExp(`(${safe})`, "gi");
-    return text.replace(regex, "<mark>$1</mark>");
-  };
+// 페이지네이션
+function renderPagination() {
+  const pageCount = Math.ceil(filteredRows.length / rowsPerPage);
+  const container = document.getElementById("pagination");
+  container.innerHTML = "";
+  if (pageCount <= 1) return;
 
-  function statusText(code) {
-    switch (code) {
-      case "A":
-        return "즉시 출고 가능";
-      case "B":
-        return "재고 보유 (문의 요망)";
-      case "C":
-        return "확인 필요 (문의 요망)";
-      default:
-        return "-";
-    }
+  for (let i = 1; i <= pageCount; i++) {
+    if (i > 10) break; // 너무 많으면 10개까지만
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === currentPage) btn.classList.add("active");
+    btn.onclick = () => { currentPage = i; updateView(); };
+    container.appendChild(btn);
   }
-  function openModal() {
-    document.getElementById("contactModal").style.display = "flex";
-  }
+}
 
-  function closeModal() {
-    document.getElementById("contactModal").style.display = "none";
-  }
+function renderResultInfo() {
+  const info = document.getElementById("result-info");
+  info.textContent = searchKeyword ? `검색 결과: ${filteredRows.length}건` : `전체 데이터: ${allRows.length}건`;
+}
 
-  function applySort() {
-    const sortType = document.getElementById("sortSelect").value;
+// 보조 함수들
+function statusText(code) {
+  const texts = { "A": "즉시 출고", "B": "재고 보유(문의)", "C": "확인 필요" };
+  return texts[code] || "-";
+}
 
-    if (sortType === "mlfb") {
-      filteredRows.sort((a, b) => a.part.localeCompare(b.part));
-    }
+function highlight(text) {
+  if (!searchKeyword) return text;
+  const regex = new RegExp(`(${searchKeyword})`, "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+}
 
-    if (sortType === "status") {
-      const order = { A: 1, B: 2, C: 3 };
-      filteredRows.sort((a, b) => order[a.status] - order[b.status]);
-    }
-  }
+function normalize(text) {
+  return text.toLowerCase().replace(/[\s-]/g, "");
+}
 
-  const modal = document.getElementById("contactModal");
-  const modalContent = modal.querySelector(".modal-content");
+function toggleDesc(td) { td.classList.toggle("expanded"); }
+function toggleMobileDesc(el) { el.parentElement.classList.toggle("open"); }
+function copyMLFB(text) { 
+  navigator.clipboard.writeText(text); 
+  alert("복사되었습니다: " + text);
+}
 
-  modal.addEventListener("click", function () {
+function openModal() { document.getElementById("contactModal").style.display = "flex"; }
+function closeModal() { document.getElementById("contactModal").style.display = "none"; }
+function openPriceModal(price) {
+  document.getElementById("price-display").textContent = `💰 ${Number(price).toLocaleString()} 원`;
+  document.getElementById("priceModal").style.display = "flex";
+}
+function closePriceModal() { document.getElementById("priceModal").style.display = "none"; }
+
+// 모달 바깥 클릭 시 닫기
+window.onclick = function(event) {
+  if (event.target.id.includes("Modal")) {
     closeModal();
-  });
-
-  modalContent.addEventListener("click", function (e) {
-    e.stopPropagation();
-  });
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      const modal = document.getElementById("contactModal");
-      if (modal.style.display === "flex") {
-        closeModal();
-      }
-    }
-  });
-
-  function copyMLFB(text) {
-    navigator.clipboard.writeText(text);
+    closePriceModal();
   }
-
-  function normalize(text) {
-    return text
-      .toLowerCase()
-      .replace(/\s+/g, "")
-      .replace(/-/g, "");
-  }
-
-  function toggleDesc(td) {
-    if (td.classList.contains("collapsed")) {
-      td.classList.remove("collapsed");
-      td.classList.add("expanded");
-    } else {
-      td.classList.remove("expanded");
-      td.classList.add("collapsed");
-    }
-  }
-
-  function renderMobileList() {
-    const container = document.getElementById("mobile-list");
-    if (!container) return;
-
-    container.innerHTML = "";
-
-    const start = (currentPage - 1) * rowsPerPage;
-    const pageRows = filteredRows.slice(start, start + rowsPerPage);
-
-    pageRows.forEach(row => {
-      const div = document.createElement("div");
-      div.className = "mobile-card";
-      div.innerHTML = `
-        <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
-          ${highlight(
-            row.desc.slice(0, 40))}...
-            ? row.desc.slice(0, 40) + "…"
-            : row.desc
-          )}
-        </div>
-
-        <div class="mobile-desc-content">
-          ${highlight(row.desc)}
-        </div>
-
-        <div class="mobile-mlfb" onclick="copyMLFB('${row.part}')">
-          ${highlight(row.part)}
-        </div>
-
-        <div class="mobile-status status-${row.status}" onclick="openModal()">
-          ${statusText(row.status)}
-        </div>
-      `;
-
-      container.appendChild(div);
-    });
-  }
-
-  function toggleMobileDesc(el) {
-    const card = el.closest(".mobile-card");
-    card.classList.toggle("open");
-  }
-
-  function openPriceModal(price) {
-    const modal = document.getElementById("priceModal");
-    modal.querySelector("p").innerHTML = `💰 ${Number(price).toLocaleString()} 원`;
-    modal.style.display = "flex";
-  }
-
-  function closePriceModal() {
-    document.getElementById("priceModal").style.display = "none";
-  }
-
-  const priceModal = document.getElementById("priceModal");
-  const priceModalContent = priceModal.querySelector(".modal-content");
-
-  priceModal.addEventListener("click", closePriceModal);
-  priceModalContent.addEventListener("click", e => e.stopPropagation());
-
-
-
-
-
+}
 </script>
 
 </body>
