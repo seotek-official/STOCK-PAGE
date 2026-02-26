@@ -29,6 +29,16 @@
     .status-B { color: #f59e0b; font-weight: 600; cursor: pointer; }
     .status-C { color: #6b7280; font-weight: 600; cursor: pointer; }
     #contactModal, #priceModal { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; z-index: 1000; }
+
+    #contactModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
     .modal-content { background: white; padding: 24px; border-radius: 10px; width: 320px; text-align: center; }
     .modal-content button { margin-top: 16px; padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
     .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
@@ -130,7 +140,11 @@
     <p class="price-notice">
           정상 제품 기준가이며,<br>
           제품 상태나 금액 등 자세한 내용은 
-          <span class="price-contact-link" onclick="openModal()">문의 바랍니다.</span>
+          <a href="javascript:void(0);" 
+               class="price-contact-link"
+               onclick="closePriceModal(); openModal();">
+               문의
+          </a> 바랍니다.
         </p>
 
     <button onclick="closePriceModal()">닫기</button>
