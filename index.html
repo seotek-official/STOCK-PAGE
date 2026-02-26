@@ -69,6 +69,24 @@
     border: 1px solid #ffd6d6;
   }
 
+  .price-notice {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .price-contact-link {
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .price-contact-link:hover {
+    color: #1e40af;
+  }
+
 
   </style>
 </head>
@@ -106,8 +124,15 @@
 <div id="priceModal">
   <div class="modal-content">
     <h3>금액 안내</h3>
+
     <p id="price-display" style="font-size:18px;font-weight:700; color:#dc2626;"></p>
-    <P>정상 제품 기준가이며, 제품 상태나 금액 등 자세한 내용은 문의바랍니다.</p>
+
+    <p class="price-notice">
+          정상 제품 기준가이며,<br>
+          제품 상태나 금액 등 자세한 내용은 
+          <span class="price-contact-link" onclick="openModal()">문의 바랍니다.</span>
+        </p>
+
     <button onclick="closePriceModal()">닫기</button>
   </div>
 </div>
