@@ -44,7 +44,11 @@
     .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
     .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
     .mlfb-link { color: #2563eb; text-decoration: underline; cursor: pointer; font-weight: 500; }
-    .special-tag { color: #dc2626; font-weight: 700; margin-right: 6px; cursor: pointer; font-size: 13px; }
+    .special-tag:hover {
+      opacity: 0.7;
+      transform: scale(1.05);
+      transition: 0.15s ease;
+    }
     .mobile-list { display: none; }
 
     @media (max-width: 768px) {
