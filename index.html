@@ -474,17 +474,27 @@ function copyMLFB(text) { navigator.clipboard.writeText(text); alert("복사되�
 function openModal() { document.getElementById("contactModal").style.display = "flex"; }
 function closeModal() { document.getElementById("contactModal").style.display = "none"; }
 function openPriceModal(price, originalPrice) {
+  // [안전장치] 값이 아예 없거나 공백이면 모달을 띄우지 않고 종료합니다.
+  if (!price || price.toString().trim() === "") return;
 
+  // 1. 숫자가 하나라도 들어있는지 확인
   const hasNumber = /\d/.test(price); 
+  
+  let displayPrice = "";
 
-  const displayPrice = hasNumber 
-    ? Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원"
-    : (price || "");
+  if (hasNumber) {
+    // 숫자가 있으면 기존처럼 콤마 찍어서 출력
+    displayPrice = Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원";
+  } else {
+    // 숫자가 없는 특수 문구(또는 깨진 글자)가 들어있다면 기계적으로 이 문구 출력
+    displayPrice = "단가 협의 가능"; 
+  }
 
+  // 기존가 처리 (숫자일 때만 작동하도록 보강)
   const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
 
   let html = "";
-  if (cleanOriginal && !isNaN(cleanOriginal)) {
+  if (cleanOriginal && cleanOriginal !== "") {
     html = `
       <div style="padding: 10px 0; margin-bottom: 10px; border-bottom: 1px solid #eee;">
         <div style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
