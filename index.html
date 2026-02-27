@@ -481,7 +481,6 @@ function openPriceModal(price, originalPrice) {
     ? Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원"
     : price;
 
-  const cleanPrice = price ? price.toString().replace(/[^0-9]/g, '') : "";
   const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
 
   let html = "";
