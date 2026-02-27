@@ -453,20 +453,29 @@ function openPriceModal(price, originalPrice) {
 
   if (cleanOriginal) {
     html = `
-      <div style="display:flex; align-items:center; gap:10px;">
-        <span style="text-decoration:line-through; color:#888; font-size:14px;">
+      <div style="text-align:center; line-height:1.6;">
+    
+        <div style="text-decoration:line-through; color:#888; font-size:15px;">
           ${Number(cleanOriginal).toLocaleString()} 원
-        </span>
-        <span style="color:#dc2626; font-weight:700; font-size:18px;">
+        </div>
+
+        <div style="font-size:18px; color:#999;">
+          ↓
+        </div>
+
+        <div style="color:#dc2626; font-weight:700; font-size:20px;">
           ${Number(cleanPrice).toLocaleString()} 원
-        </span>
+        </div>
+
       </div>
     `;
   } else {
     html = `
-      <span style="color:#dc2626; font-weight:700; font-size:18px;">
-        ${Number(cleanPrice).toLocaleString()} 원
-      </span>
+      <div style="text-align:center;">
+        <span style="color:#dc2626; font-weight:700; font-size:20px;">
+          ${Number(cleanPrice).toLocaleString()} 원
+        </span>
+      </div>
     `;
   }
 
