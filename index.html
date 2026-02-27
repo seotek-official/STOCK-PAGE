@@ -39,7 +39,36 @@
       justify-content: center;
       z-index: 2000;
     }
-    .modal-content { background: white; padding: 24px; border-radius: 10px; width: 320px; text-align: center; }
+    .modal-content {
+      background: white; padding: 24px; border-radius: 10px; width: 320px; text-align: center; }
+
+      #priceModal .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 16px; / 더 둥글게 /
+        width: 340px;
+        text-align: center;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); / 부드러운 그림자 */
+        border: 1px solid #f0f0f0;
+        }
+
+      /* 금액 안내 제목 스타일 */
+      #priceModal h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #333;
+        }
+
+      /* 닫기 버튼 디자인 개선 /
+      #priceModal button {
+        width: 100%; / 버튼을 가득 채우기 /
+        background: #374151; / 차분한 다크 그레이 */
+        padding: 12px;
+        font-weight: 600;
+        margin-top: 20px;
+        }
+      }
     .modal-content button { margin-top: 16px; padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
     .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
     .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
@@ -453,28 +482,22 @@ function openPriceModal(price, originalPrice) {
 
   if (cleanOriginal) {
     html = `
-      <div style="text-align:center; line-height:1.6;">
-    
-        <div style="text-decoration:line-through; color:#888; font-size:15px;">
-          ${Number(cleanOriginal).toLocaleString()} 원
+      <div style="background: #f9fafb; padding: 20px; border-radius: 12px; margin-bottom: 10px;">
+        <div style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
+          기존가: ${Number(cleanOriginal).toLocaleString()}원
         </div>
-
-        <div style="font-size:18px; color:#999;">
-          ↓
+        <div style="color: #ef4444; font-size: 24px; font-weight: 800;">
+          <span style="font-size: 16px; vertical-align: middle;">특가</span> 
+          ${Number(cleanPrice).toLocaleString()}원
         </div>
-
-        <div style="color:#dc2626; font-weight:700; font-size:20px;">
-          ${Number(cleanPrice).toLocaleString()} 원
-        </div>
-
       </div>
     `;
   } else {
     html = `
-      <div style="text-align:center;">
-        <span style="color:#dc2626; font-weight:700; font-size:20px;">
-          ${Number(cleanPrice).toLocaleString()} 원
-        </span>
+      <div style="background: #f9fafb; padding: 20px; border-radius: 12px; margin-bottom: 10px;">
+        <div style="color: #111827; font-size: 24px; font-weight: 800;">
+          ${Number(cleanPrice).toLocaleString()}원
+        </div>
       </div>
     `;
   }
