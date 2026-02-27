@@ -247,7 +247,7 @@ fetch("stock.csv?v=20260130")
         desc: cleanCols[0] || "",
         part: cleanCols[1] || "",
         status: (cleanCols[2] || "").toUpperCase(),
-        price: cleanCols[3] || ""
+        price: cleanCols[3] || "",
         originalPrice: cleanCols[4] || ""
       };
     }).filter(row => row && row.part);
