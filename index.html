@@ -475,6 +475,12 @@ function openModal() { document.getElementById("contactModal").style.display = "
 function closeModal() { document.getElementById("contactModal").style.display = "none"; }
 function openPriceModal(price, originalPrice) {
 
+  const hasNumber = /\d/.test(price); 
+  
+  const displayPrice = hasNumber 
+    ? Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원"
+    : price;
+
   const cleanPrice = price ? price.toString().replace(/[^0-9]/g, '') : "";
   const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
 
