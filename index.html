@@ -45,10 +45,10 @@
       #priceModal .modal-content {
         background: white;
         padding: 30px;
-        border-radius: 16px; / 더 둥글게 /
+        border-radius: 16px;
         width: 340px;
         text-align: center;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); / 부드러운 그림자 */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         border: 1px solid #f0f0f0;
         }
 
@@ -476,16 +476,15 @@ function closeModal() { document.getElementById("contactModal").style.display = 
 function openPriceModal(price, originalPrice) {
 
   const hasNumber = /\d/.test(price); 
-  
+
   const displayPrice = hasNumber 
     ? Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원"
-    : price;
+    : (price || "");
 
   const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
 
   let html = "";
-
-  if (cleanOriginal) {
+  if (cleanOriginal && !isNaN(cleanOriginal)) {
     html = `
       <div style="padding: 10px 0; margin-bottom: 10px; border-bottom: 1px solid #eee;">
         <div style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
@@ -493,7 +492,7 @@ function openPriceModal(price, originalPrice) {
         </div>
         <div style="color: #ef4444; font-size: 24px; font-weight: 800;">
           <span style="font-size: 16px; vertical-align: middle;">할인가</span> 
-          ${Number(cleanPrice).toLocaleString()}원
+          ${displayPrice}
         </div>
       </div>
     `;
@@ -501,7 +500,7 @@ function openPriceModal(price, originalPrice) {
     html = `
       <div style="padding: 20px 0; margin-bottom: 10px;">
         <div style="color: #111827; font-size: 24px; font-weight: 800;">
-          ${Number(cleanPrice).toLocaleString()}원
+          ${displayPrice}
         </div>
       </div>
     `;
@@ -510,6 +509,7 @@ function openPriceModal(price, originalPrice) {
   document.getElementById("price-display").innerHTML = html;
   document.getElementById("priceModal").style.display = "flex";
 }
+
 function closePriceModal() { document.getElementById("priceModal").style.display = "none"; }
 window.onclick = function(event) { if (event.target.id === "contactModal" || event.target.id === "priceModal") { closeModal(); closePriceModal(); } }
 
