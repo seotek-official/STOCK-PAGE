@@ -22,16 +22,16 @@ SIMOTICS S synchronous motor 1FK7-CT PN=1.5kW; UDC=600V M0=6Nm (100K); NN=3000rp
 SIMOTICS S synchronous motor 1FK7-CT PN=1.9 kW; UDC=600 V M0=8.5 Nm (100K); NN=3000 rpm,1FK7062-2AF71-1CH1,B,2000000,2840000
 "****spare part**** SIMOTICS S synchronous servo motor 1FK7 Compact 11 Nm, 100K 3000 rpm, 2.29 kW",1FK7063-5AF71-1AH3,B,2100000,5740000
 "****spare part**** SIMOTICS S synchronous servo motor 1FK7 Compact 8 Nm, 100K, 3000 rpm, 2.14 kW naturally cooled IM B5 (IM V1, IM V3) power/signal connector plug rotatable by 270° ABSOLUTE ENCODER 2048 P/REV (ENCODER A-2048) WITH DRIVE-CLIQ INTERFACE; PERFORMANCE REDUCTION BY 10% DUE TO ABSOLUTE ENCODER; PLAIN SHAFT, TOLERANCE N WITHOUT HOLDING BRAKE; DEGREE OF PROTECTION IP64; PAINT FINISH RAL7016",1FK7080-5AF71-1FG3,B,1900000,6340000
-"SIMOTICS S synchronous motor 1FK7-CT PN=2.6kW; UDC=600V M0=16Nm (100K); NN=2000rpm; naturally cooled design IMB 5 (IM V1, IM V3) Flange 1 Power connector rotatable Absolute encoder 20-bit + 12-bit multiturn with DRIVE-CLiQ interface (encoder AM20DQI) Smooth shaft, tolerance N without holding brake, degree of protection IP64",1FK7083-2AC71-1RG0,B,2100000,2350000
+"SIMOTICS S synchronous motor 1FK7-CT PN=2.6kW; UDC=600V M0=16Nm (100K); NN=2000rpm; naturally cooled design IMB 5 (IM V1, IM V3) Flange 1 Power connector rotatable Absolute encoder 20-bit + 12-bit multiturn with DRIVE-CLiQ interface (encoder AM20DQI) Smooth shaft, tolerance N without holding brake, degree of protection IP64",1FK7083-2AC71-1RG0,B,2000000,2350000
 "SIMOTICS S synchronous motor 1FK7-CT PN=3.8 kW; UDC=600 V M0=18 Nm (100K); NN=3000 rpm; naturally cooled design IMB 5 (IM V1, IM V3) flange 1 power connector rotatable multi-pole resolver with DRIVE-CLiQ interface shaft with feather key, tolerance N without holding brake degree of protection IP64",1FK7100-2AF71-1UA0,B,1510000,2220000
 ,1FL6042-2AF21-1AA1,B,320000,420000
 "SIMOTICS S-1FL6-1FL6 Operating voltage 3AC 400 V Pn=0.75 kW; Nn=2000 rpm M0=4 Nm; MN=3.58 Nm Shaft height 65 mm Absolute encoder 20 bit 12-bit multi-turn plain shaft, Tolerance N without holding brake Degree of protection IP65 with sealing ring compatible with the converters SINAMICS V70 & V90",1FL6061-1AC61-0LG1,B,1320000,
 ,1FL6092-1AC61-2LB1,B,710000,1960000
-"SIMOTICS L SME91 encoder connection box for one 1FN or 1FW6 motor for connection of the temperature sensor and an absolute position measuring system, for PTC130/KTY",1FN1910-0AA20-1AA0,B,710000,1310000
+"SIMOTICS L SME91 encoder connection box for one 1FN or 1FW6 motor for connection of the temperature sensor and an absolute position measuring system, for PTC130/KTY",1FN1910-0AA20-1AA0,B,650000,1310000
 ,1FN3050-4SA00-0AA0,A,120000,210000
 "****spare part**** SIMOTICS S synchronous servo motor 1FT6 70 Nm, 100K, 1500 rpm naturally cooled IM B5 (IM V1, IM V3) ",1FT6108-8AB71-1AB2,B,13580000,
-"SIMOTICS S Synchronous motor 1FT7, M0=12Nm (100K) NN=4500rpm, PN=2.55kW",1FT7066-5AH71-1BG5,B,2240000,4320000
-"SIMOTICS S Synchronous motor 1FT7, M0=50Nm (100K) NN=3000rpm, PN=8.80kW Naturally cooled Frame size IMB 5 (IM V1, IM V3) Conventional flange (1FT6/1FK7 compatible) POWER CONNECTOR ROTATABLE ABSOLUTE ENCODER 22 BITS MULTI TURN WITH DRIVE-CLIQ INTERFACE (ENCODER AM-22-DQ) CONNECTOR ROTATABLE PLAIN SHAFT, WITH HOLDING BRAKE; ACCURACY TOLERANCE N VIBRATION SEVERITY GRADE A, DEGREE OF PROTECTION IP 64",1FT7105-5AF71-1FH0,B,5710000,8180000
+"SIMOTICS S Synchronous motor 1FT7, M0=12Nm (100K) NN=4500rpm, PN=2.55kW",1FT7066-5AH71-1BG5,B,2520000,4320000
+"SIMOTICS S Synchronous motor 1FT7, M0=50Nm (100K) NN=3000rpm, PN=8.80kW Naturally cooled Frame size IMB 5 (IM V1, IM V3) Conventional flange (1FT6/1FK7 compatible) POWER CONNECTOR ROTATABLE ABSOLUTE ENCODER 22 BITS MULTI TURN WITH DRIVE-CLIQ INTERFACE (ENCODER AM-22-DQ) CONNECTOR ROTATABLE PLAIN SHAFT, WITH HOLDING BRAKE; ACCURACY TOLERANCE N VIBRATION SEVERITY GRADE A, DEGREE OF PROTECTION IP 64",1FT7105-5AF71-1FH0,B,6430000,8180000
 "SIMOTICS GP motor type: 1AV2182B low-voltage motor, IEC squirrel-cage rotor, self-cooled, IP55 temperature class 155(F) according to 130(B) aluminum enclosure High Efficiency IE2, in EEA: minimum efficiency according to (EU) 2019/1781 is IE3 (as of 01.07.2021) 4-pole * size 180 * 18.5 kW (50 Hz) 21.3 kW (60 Hz) standard color RAL 7030, if no order code is specified for selecting another color. The products will be labelled either by Siemens or Innomotics as manufacturer.? 3 AC 50 Hz 220 VD/380 VY 3 AC 60 Hz 440 VY IM B 3, 3 PTC thermistors for disconnection (2 terminals) Terminal box at top",1LE1001-1EB22-1AB4-Z,B,1510000,
 "SIMOTICS GP motor type: 1AV3083B low-voltage motor,",1LE1003-0DB32-2KA4-Z,A,230000,
 ,1LE1004-1AB49-0AA4,B,단가 협의 가능,
@@ -59,7 +59,7 @@ ET 200 RSM Maintenance switch module Up to 25 A Up to 25 A Disconnector function
 "ET 200pro RSE HF Reversing starter High Feature Mechanical switching Electronic overload protection AC-3, 0.9 kW / 400 V 0.15 A...2.00 A without brake contact 4 DI Han Q4/2 - Han Q8/0",3RK1304-5LS40-3AA0,B,870000,1200000
 "ET 200pro DSE ST DOL starter Standard Mechanical switching Electronic overload protection AC-3, 5.5 kW / 400 V 1.50 A...12.00 A without brake contact Han Q4/2 - Han Q8/0",3RK1304-5LS40-4AA0,B,660000,850000
 "Connector set, motor connection 8 x 1.5 mm2, 9-pole, complete with PG16 cable entry",3RK1902-0CE00,A,50000,60000
-XB3 for ET 200S for DS1-X / RS1-X Brake control module 24 V DC 4 A for motors with mechanical brakes DI 2 x 24 V DC local control,3RK1903-0CE00,B,단가 협의 가능,0
+XB3 for ET 200S for DS1-X / RS1-X Brake control module 24 V DC 4 A for motors with mechanical brakes DI 2 x 24 V DC local control,3RK1903-0CE00,B,단가 협의 가능,
 "Socket insert Han Q4/2 5 contact sockets 4 mm2, 2 auxiliary contacts 0.5 mm2 pin 11+12 Connector set power supply for connection to MS, RSM of ET200pro, M200D Sleeve housing angled Outgoing unit including screw connection",3RK1911-2BE10,B,70000,97000
 Backplane bus module 110 mm for ET 200PRO motor starter Maintenance switch modules and ASm disconnection module 400 V,3RK1922-2BA00,B,80000,104000
 "Backplane bus module 110 mm for ET 200pro F-RSM, Safety local maintenance switch module",3RK1922-2BA01,B,80000,104000
@@ -92,7 +92,7 @@ MP277 멀티 패널 터치 - 10 인치,6AV6643-0CD01-1AX1,B,1330000,
 SITOP PSU200M 10 A stabilized power supply input: 120/230-500 V AC output: 24 V DC/10 A,6EP1334-3BA10,B,300000,396000
 "SITOP power 10 A, Stabilized power supply input: 3 AC 400-500 V output: DC 24 V/10 A",6EP1434-2BA00,A,250000,420000
 SITOP PSU300S 40 A stabilized power supply input: 400-500 V 3 AC output: 24 V DC/40 A,6EP1437-2BA20,B,510000,634000
-"********** spare part ********* SITOP 2.5 A, DC/DC converter stabilized power supply input: 24 V DC output: 12 V DC/2.5 A",6EP1621-2BA00,B,180000,330000
+"********** spare part ********* SITOP 2.5 A, DC/DC converter stabilized power supply input: 24 V DC output: 12 V DC/2.5 A",6EP1621-2BA00,B,200000,330000
 SITOP PSE201U buffer module Buffer time 100 ms to 10 s depending on load current *Ex approval no longer available*,6EP1961-3BA01,B,250000,348000
 SITOP PSU8200 24 V/40 A stabilized power supply input: 120/230 V AC output: 24 V DC/40 A *Ex approval no longer available*,6EP3337-8SB00-0AY0,B,620000,808000
 "Cable set consisting of 6 m Flat ribbon cable, 5-pin 8 50-pin connector with strain relief clamp for DIY assembly",6EP5306-5BG00,B,100000,130000
@@ -169,10 +169,10 @@ Terminal strip converter from 50-pin IDC connector to Screw terminals for 1 to 1
 "SIMATIC DP, 1 terminal module TM-E30C44-01 for ET 200S for electronic modules 30 mm overall width, spring-type terminals 4x 4 terminal connections without terminal access to AUX1, AUX1 continuous",6ES7193-4CG30-0AA0,B,50000,181000
 "SIMATIC DP, 1 terminal module TM-E30C44-01 for ET 200S for electronic modules 30 mm overall width, spring-type terminals 4x 4 terminal connections without terminal access to AUX1, AUX1 continuous",6ES7193-4CG30-0AA0,A,50000,181000
 "SIMATIC DP, Terminal module TM-P30C44-A0 f. ET200S f. PM-E F PROFIsafe power module, 30 mm overall width, spring-type terminals 2x3+2x4 terminal connections, with terminal access to AUX1, AUX1 interrupted",6ES7193-4CK30-0AA0,B,56000,
-"*** spare part *** SIMATIC DP, terminal module TM-C120C for ET 200S Compact, spring-loaded terminals, 4x 21 terminal connections, suitable for 32-channel mod. in 2-wire system",6ES7193-4DL00-0AA0,B,단가 협의 가능,
-"*** spare part *** SIMATIC DP, terminal module TM-C120S for ET 200S Compact, screw terminals, 4x 21 terminal connections, suitable for 32-channel mod. in 2-wire system",6ES7193-4DL10-0AA0,A,169000,
+"*** spare part *** SIMATIC DP, terminal module TM-C120C for ET 200S Compact, spring-loaded terminals, 4x 21 terminal connections, suitable for 32-channel mod. in 2-wire system",6ES7193-4DL00-0AA0,B,50000,
+"*** spare part *** SIMATIC DP, terminal module TM-C120S for ET 200S Compact, screw terminals, 4x 21 terminal connections, suitable for 32-channel mod. in 2-wire system",6ES7193-4DL10-0AA0,A,80000,
 "*** Spare part *** SIMATIC DP, spare part Termination module for ET 200S",6ES7193-4JA00-0AA0,B,22000,
-"SIMATIC DP, Charging device 230 V, for bus tester BT200 for BT200 from 6ES7181-0AA01-0AA0",6ES7193-8LA00-0AA0,B,단가 협의 가능,
+"SIMATIC DP, Charging device 230 V, for bus tester BT200 for BT200 from 6ES7181-0AA01-0AA0",6ES7193-8LA00-0AA0,B,50000,
 "SIMATIC DP, Y-connector for ET 200 distributed I/O For double connection of I/Os via single cable to ET 200 5-pole M12",6ES7194-1KA01-0XA0,A,14000,21000
 "SIMATIC DP, Y-connector for ET 200 distributed I/O For double connection of I/Os via single cable to ET 200 5-pole M12",6ES7194-1KA01-0XA0,A,14000,21000
 "SIMATIC DP, Connection block M12, 7/8"" for ET 200ECO, 2x M12 and 2x 7/8"", 2 rotary coding switches for PROFIBUS DP, Address setting",6ES7194-3AA00-0BA0,A,60000,
@@ -245,8 +245,8 @@ Front connector module with 1x50 pole IDC connector for digital 32 I/O modules o
 "***Spare part*** SIMATIC S7, memory cards for S7-300, Short design, 5V Flash EPROM, 16 KB",6ES7951-0KD00-0AA0,B,단가 협의 가능,
 "***Spare part*** SIMATIC S7, memory cards for S7-300, Short design, 5V Flash EPROM, 32 KB",6ES7951-0KE00-0AA0,B,단가 협의 가능,
 "SIMATIC S7, Diagnostic repeaters for PROFIBUS DP, for online diagnostics of the PROFIBUS cable, DP standard slave up to 12 Mbit/s, Degree of protection IP20, FastConnect connection method",6ES7972-0AB01-0XA0,B,923000,
-"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, With PG receptacle 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BB52-0XA0,A,60000,90000
-"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, With PG receptacle 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BB52-0XA0,A,60000,90000
+"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, With PG receptacle 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BB52-0XA0,A,85000,90000
+"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, With PG receptacle 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BB52-0XA0,A,85000,90000
 ****spare part**** SINUMERIK FM NC/810D/DE/840D/DE flat operator panel OP 030 with system software monochrome/240x128 pixels,6FC5203-0AB00-0AA0,B,단가 협의 가능,
 ****spare part**** SINUMERIK machine control panel OP 032S standard/US layout width 310 mm,6FC5203-0AD10-1AA0,B,단가 협의 가능,
 ****spare part**** SINUMERIK FM NC/810D/DE/840D/DE interface MPI for customer operator panel with 64DI/64DQ,6FC5203-0AE00-0AA0,B,단가 협의 가능,
@@ -285,57 +285,57 @@ SINUMERIK ACCESSORIES ELECTRONIC HANDWHEEL FRONT PANEL 76.2 X 76.2 MM OPERATING 
 ABSOLUTE ENCODER MULTITURN 6FX2001-5FD25 36 BIT WITH DRIVE-CLIQ; SYNCHR. FLANGE; SHAFT 6MM,6FX2001-5FD25-1AA0,B,717000,1024000
 SPARE ENCODER KIT FOR 6FX2001-5JD24 SYNCHRONOUS MOTORS 1FT/1FK SHAFT HEIGHT 48/80/100: AS24DQI-88 DRIVE-CLIQ. ELECTRONIC RATING PLATE INDIVIDUALLY PROGRAMMABLE IDENTICAL TO ENCODER WITH MLFB ENDING IN 1 IN CASE OF SPARE PARTS SERVICE DELIVERED W/O MOTOR DATA. LOAD DATA ON SITE SEE SIOS ID 90000777 (12/02),6FX2001-5JD24-2DA0,B,710000,
 SPARE ENCODER KIT FOR 6FX2001-5JE24 SYNCHRONOUS MOTORS 1FT/1FK SHAFT HEIGHT 48/63/80/100: AM24DQI-88 DRIVE-CLIQ. ELECTRONIC RATING PLATE INDIVIDUALLY PROGRAMMABLE IDENTICAL TO ENCODER WITH MLFB ENDING IN 1 IN CASE OF SPARE PARTS SERVICE DELIVERED W/O MOTOR DATA. LOAD DATA ON SITE SEE PRODIS ID 59459190.,6FX2001-5JE24-2DA0,B,710000,
-"SIGNAL CONNECTOR,17-WAY SOCKET, UNION NUT, CABLE CLAMPING 5.5 - 12 MM, PCK = 3 UNITS",6FX2003-0CE17,B,단가 협의 가능,
-Power connector Sz. 1 type: 6FX2003-1CG10 8-pole pin external thread for linear motors Cable terminal 7.7-14.5 mm Core cross-section 1.5-2.5 mm2,6FX2003-1CG10,A,단가 협의 가능,
-"SINUMERIK FM-NC /840D /810D HAND-HELD UNIT B-MPI 10 M CABLE (2 EMERGENCY-OFF CHANNELS, 2 CHANN. FOR SAFETY SWITCH, WITH 4-CORE CONNECTION)",6FX2007-1AE13,B,단가 협의 가능,
-,6FX5002-2AH11-1AD0,A,단가 협의 가능,
-"Signal cable pre-assembled type: 6FX5002-2DC10 (SINAMICS DRIVE-CLiQ) plug IP20/IP67, with 24 V MOTION-CONNECT 500 length (m)= +0 +0 +9 +0",6FX5002-2DC10-1AK0,B,130000,140000
-"Signal cable pre-assembled type: 6FX5002-2DC10 (SINAMICS DRIVE-CLiQ) plug IP20/IP67, with 24 V MOTION-CONNECT 500 length (m)= +0 +10 +1 +0",6FX5002-2DC10-1BB0,B,150000,151000
+"SIGNAL CONNECTOR,17-WAY SOCKET, UNION NUT, CABLE CLAMPING 5.5 - 12 MM, PCK = 3 UNITS",6FX2003-0CE17,B,50000,
+Power connector Sz. 1 type: 6FX2003-1CG10 8-pole pin external thread for linear motors Cable terminal 7.7-14.5 mm Core cross-section 1.5-2.5 mm2,6FX2003-1CG10,A,50000,
+"SINUMERIK FM-NC /840D /810D HAND-HELD UNIT B-MPI 10 M CABLE (2 EMERGENCY-OFF CHANNELS, 2 CHANN. FOR SAFETY SWITCH, WITH 4-CORE CONNECTION)",6FX2007-1AE13,B,40000,
+,6FX5002-2AH11-1AD0,A,50000,
+"Signal cable pre-assembled type: 6FX5002-2DC10 (SINAMICS DRIVE-CLiQ) plug IP20/IP67, with 24 V MOTION-CONNECT 500 length (m)= +0 +0 +9 +0",6FX5002-2DC10-1AK0,B,120000,140000
+"Signal cable pre-assembled type: 6FX5002-2DC10 (SINAMICS DRIVE-CLiQ) plug IP20/IP67, with 24 V MOTION-CONNECT 500 length (m)= +0 +10 +1 +0",6FX5002-2DC10-1BB0,B,100000,151000
 "signal cable pre-assembled (absolute encoder in motor) 3x 2x 0.14+4x 0.14+2x0.5+4x 0.23 C UL/CSA, DESINA MOTION-CONNECT 500 Dmax=9.9 mm TYPE: 6FX5002-2EQ10 LENGTH (M) = +0 +0 +4 +0",6FX5002-2EQ10-1AE0,B,97000,116000
-"signal cable pre-assembled (absolute encoder in motor) 3x 2x 0.14+4x 0.14+2x0.5+4x 0.23 C UL/CSA, DESINA MOTION-CONNECT 500 Dmax=9.9 mm TYPE: 6FX5002-2EQ10 LENGTH (M) = +0 +0 +6 +0",6FX5002-2EQ10-1AG0,B,107000,129000
-"signal cable pre-assembled (absolute encoder in motor) 3x 2x 0.14+4x 0.14+2x0.5+4x 0.23 C UL/CSA, DESINA MOTION-CONNECT 500 Dmax=9.9 mm TYPE: 6FX5002-2EQ10 LENGTH (M) = +0 +0 +7 +0",6FX5002-2EQ10-1AH0,B,112000,135000
-"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +5 +0",6FX5002-5CA01-1AF0,B,단가 협의 가능,323000
-"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +8 +0",6FX5002-5CA01-1AJ0,B,단가 협의 가능,323000
-"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +10 +0 +0",6FX5002-5CA01-1BA0,B,단가 협의 가능,323000
-"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +7 +0",6FX5002-5CA10-1AH0,B,단가 협의 가능,323000
-Power cable pre-assembled 4x 1.5 C SPEED-CONNECT connector Sz. 1 (SINAMICS AC Drive) UL/CSA DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CG10 LENGTH (M) = +0 +10 +0 +0,6FX5002-5CG10-1BA0,B,단가 협의 가능,323000
-Power cable pre-assembled 4x 2.5 C SPEED-CONNECT connector Sz. 1 for SINAMICS Power Module MOTION-CONNECT 500 UL/CSA DESINA Dmax=10 mm TYPE: 6FX5002-5CG12 LENGTH (M) = +0 +10 +0 +0,6FX5002-5CG12-1BA0,B,단가 협의 가능,323000
-"Power cable pre-assembled type: 6FX5002-5CG21 4x 1.5 C connector Sz. 1.5 (SINAMICS AC Drive) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm +0 +0 +4 +0",6FX5002-5CG21-1AE0,B,단가 협의 가능,323000
-"Power cable pre-assembled type: 6FX5002-5CG31 4x 2.5 C, Connector Sz. 1.5 (SINAMICS AC Drive) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=10 mm +0 +0 +4 +0.5",6FX5002-5CG31-1AE5,B,153000,184000
-"Power cable pre-assembled TYPE 6FX5002-5CN06 4X1,5 C, SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX=8.4 MM LENGTH (M) = +0 +0 +6 +0",6FX5002-5CN06-1AG0,A,152000,180000
-"Power cable pre-assembled type: 6FX5002-5CS02 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector open/1.5 mm2 UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm; length (m)= +0 +0 +5 +0",6FX5002-5CS02-1AF0,B,146000,176000
-"Power cable pre-assembled type: 6FX5002-5CS02 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector open/1.5 mm2 UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm; length (m)= +0 +0 +5 +0.5",6FX5002-5CS02-1AF5,B,149000,180000
-,6FX5002-5DA31-1AF0,B,단가 협의 가능,586000
-"Power cable pre-assembled TYPE 6FX5002-5DN06 4X1.5, (2X1.5)C C CONNECTOR SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX = 10.8 MM LENGTH (M) = +0 +20 +0 +0",6FX5002-5DN06-1CA0,A,단가 협의 가능,277000
-"Power cable pre-assembled TYPE 6FX5002-5DN06 4X1.5, (2X1.5)C C CONNECTOR SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX = 10.8 MM LENGTH (M) = +0 +20 +5 +0",6FX5002-5DN06-1CF0,A,단가 협의 가능,303000
-"Power cable pre-assembled type: 6FX5002-5DS31 (1FT/1FK/1PH for SINAMICS) 4x 2.5+(2x1.5) C Connector Sz. 1.5/2.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Dmax=14.3 mm, Length (m)= +0 +0 +6 +0",6FX5002-5DS31-1AG0,B,272000,327000
-"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +4 +0.5",6FX5012-5CS01-1AE5,B,단가 협의 가능,225000
-"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +5 +0",6FX5012-5CS01-1AF0,B,단가 협의 가능,225000
-"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +6 +0.5",6FX5012-5CS01-1AG5,B,단가 협의 가능,233000
-"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +6 +0.5",6FX5012-5CS01-1AG5,B,단가 협의 가능,233000
+"signal cable pre-assembled (absolute encoder in motor) 3x 2x 0.14+4x 0.14+2x0.5+4x 0.23 C UL/CSA, DESINA MOTION-CONNECT 500 Dmax=9.9 mm TYPE: 6FX5002-2EQ10 LENGTH (M) = +0 +0 +6 +0",6FX5002-2EQ10-1AG0,B,110000,129000
+"signal cable pre-assembled (absolute encoder in motor) 3x 2x 0.14+4x 0.14+2x0.5+4x 0.23 C UL/CSA, DESINA MOTION-CONNECT 500 Dmax=9.9 mm TYPE: 6FX5002-2EQ10 LENGTH (M) = +0 +0 +7 +0",6FX5002-2EQ10-1AH0,B,110000,135000
+"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +5 +0",6FX5002-5CA01-1AF0,B,200000,323000
+"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +8 +0",6FX5002-5CA01-1AJ0,B,200000,323000
+"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +10 +0 +0",6FX5002-5CA01-1BA0,B,200000,323000
+"****spare part**** power cable pre-assembled 4x 1.5 C, plug size 1 (1FT/1FK to 611/810D/SIMOVERT) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CA01 LENGTH (M) = +0 +0 +7 +0",6FX5002-5CA10-1AH0,B,200000,323000
+Power cable pre-assembled 4x 1.5 C SPEED-CONNECT connector Sz. 1 (SINAMICS AC Drive) UL/CSA DESINA MOTION-CONNECT 500 Dmax=8.4 mm TYPE: 6FX5002-5CG10 LENGTH (M) = +0 +10 +0 +0,6FX5002-5CG10-1BA0,B,200000,323000
+Power cable pre-assembled 4x 2.5 C SPEED-CONNECT connector Sz. 1 for SINAMICS Power Module MOTION-CONNECT 500 UL/CSA DESINA Dmax=10 mm TYPE: 6FX5002-5CG12 LENGTH (M) = +0 +10 +0 +0,6FX5002-5CG12-1BA0,B,200000,323000
+"Power cable pre-assembled type: 6FX5002-5CG21 4x 1.5 C connector Sz. 1.5 (SINAMICS AC Drive) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm +0 +0 +4 +0",6FX5002-5CG21-1AE0,B,200000,323000
+"Power cable pre-assembled type: 6FX5002-5CG31 4x 2.5 C, Connector Sz. 1.5 (SINAMICS AC Drive) UL/CSA, DESINA MOTION-CONNECT 500 Dmax=10 mm +0 +0 +4 +0.5",6FX5002-5CG31-1AE5,B,150000,184000
+"Power cable pre-assembled TYPE 6FX5002-5CN06 4X1,5 C, SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX=8.4 MM LENGTH (M) = +0 +0 +6 +0",6FX5002-5CN06-1AG0,A,150000,180000
+"Power cable pre-assembled type: 6FX5002-5CS02 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector open/1.5 mm2 UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm; length (m)= +0 +0 +5 +0",6FX5002-5CS02-1AF0,B,150000,176000
+"Power cable pre-assembled type: 6FX5002-5CS02 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector open/1.5 mm2 UL/CSA, DESINA MOTION-CONNECT 500 Dmax=8.4 mm; length (m)= +0 +0 +5 +0.5",6FX5002-5CS02-1AF5,B,150000,180000
+,6FX5002-5DA31-1AF0,B,300000,586000
+"Power cable pre-assembled TYPE 6FX5002-5DN06 4X1.5, (2X1.5)C C CONNECTOR SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX = 10.8 MM LENGTH (M) = +0 +20 +0 +0",6FX5002-5DN06-1CA0,A,250000,277000
+"Power cable pre-assembled TYPE 6FX5002-5DN06 4X1.5, (2X1.5)C C CONNECTOR SPEED-CONNECT SIZE 1 FOR SINAMICS S120 BOOKSIZE MOTOR MODULE C-/D-TYPES MOTION-CONNECT 500 UL/CSA, DESINA DMAX = 10.8 MM LENGTH (M) = +0 +20 +5 +0",6FX5002-5DN06-1CF0,A,270000,303000
+"Power cable pre-assembled type: 6FX5002-5DS31 (1FT/1FK/1PH for SINAMICS) 4x 2.5+(2x1.5) C Connector Sz. 1.5/2.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Dmax=14.3 mm, Length (m)= +0 +0 +6 +0",6FX5002-5DS31-1AG0,B,275000,327000
+"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +4 +0.5",6FX5012-5CS01-1AE5,B,200000,225000
+"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +5 +0",6FX5012-5CS01-1AF0,B,200000,225000
+"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +6 +0.5",6FX5012-5CS01-1AG5,B,200000,233000
+"Power cable pre-assembled type: 6FX5012-5CS01 (1FT/1FK/1PH for SINAMICS) 4x 1.5 C, Connector Sz. 1/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=11.5 mm, Length (m)= +0 +0 +6 +0.5",6FX5012-5CS01-1AG5,B,200000,233000
 "power cable pre-assembled type: 6FX5012-5CS21 (1FT/1FK for SINAMICS) 4x 1.5 C, Connector Sz. 1.5/1.5 mm2 UL/CSA, DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed Dmax=15.5 mm; Length (m)= +0 +0 +4 +0",6FX5012-5CS21-1AE0,B,229000,277000
-"Power cable pre-assembled type: 6FX5012-5DS21 (1FT/1FK/1PH for SINAMICS) 4x 1.5+(2x1.5) C Connector Sz. 1.5/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed; Dmax=13.1 mm, Length (m)= +0 +0 +9 +0.5",6FX5012-5DS21-1AK5,B,단가 협의 가능,342000
+"Power cable pre-assembled type: 6FX5012-5DS21 (1FT/1FK/1PH for SINAMICS) 4x 1.5+(2x1.5) C Connector Sz. 1.5/1.5 mm2 UL/CSA DESINA MOTION-CONNECT 500 Module side: contacts crimped Connector housing enclosed; Dmax=13.1 mm, Length (m)= +0 +0 +9 +0.5",6FX5012-5DS21-1AK5,B,300000,342000
 Signal cable pre-assembled for RS-232-C Interfaces 4x (2x0.18) C MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=6.7 mm Length (m)= TYPE: 6FX8002-1AA01 LENGTH (M) = +0 +0 +5 +0,6FX8002-1AA01-1AF0,B,120000,144000
-"Signal cable pre-assembled for absolute value encoder SSI and EnDat 5V DC, also extension for base 6FX8002-2AD00-XXXX 3x (2x0.14) C+4x 0.14+2x0.5 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.2 mm TYPE: 6FX8002-2AD04 LENGTH (M) = +0 +0 +3 +0",6FX8002-2AD04-1AD0,B,단가 협의 가능,161000
+"Signal cable pre-assembled for absolute value encoder SSI and EnDat 5V DC, also extension for base 6FX8002-2AD00-XXXX 3x (2x0.14) C+4x 0.14+2x0.5 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.2 mm TYPE: 6FX8002-2AD04 LENGTH (M) = +0 +0 +3 +0",6FX8002-2AD04-1AD0,B,140000,161000
 "Signal cable pre-assembled type: 6FX8002-2CA80 for incremental encoder SIN/COS 1 VPP without C and D track 3x (2x0.14) C+4x 0.14+2x0.5 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable, UL/CSA, DESINA Dmax=9.2 mm Length (m)= +0 +0 +5 +0",6FX8002-2CA80-1AF0,B,138000,166000
 "signal cable, pre-assembled Extension for incremental encoder TTL 5V, 6FX2001-2 4x (2x0.34)+4x 0.5 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable, UL/CSA, DESINA Dmax=9.3 mm Length (m)= TYPE: 6FX8002-2CB54 LENGTH (M) = +0 +0 +3 +0",6FX8002-2CB54-1AD0,B,103000,123000
 "signal cable, pre-assembled type: 6FX8002-2DC10 DRIVE-CLiQ with 24 V plug RJ45 IP20 on module side and IP67 on motor side MOTION-CONNECT 800PLUS released only up to 75 m length Dmax=7.1 mm length (m)= +0 +10 +8 +0",6FX8002-2DC10-1BJ0,A,200000,225000
-"signal cable, pre-assembled type: 6FX8002-2DC10 DRIVE-CLiQ with 24 V plug RJ45 IP20 on module side and IP67 on motor side MOTION-CONNECT 800PLUS released only up to 75 m length Dmax=7.1 mm length (m)= +0 +20 +8 +0",6FX8002-2DC10-1CJ0,A,270000,294000
+"signal cable, pre-assembled type: 6FX8002-2DC10 DRIVE-CLiQ with 24 V plug RJ45 IP20 on module side and IP67 on motor side MOTION-CONNECT 800PLUS released only up to 75 m length Dmax=7.1 mm length (m)= +0 +20 +8 +0",6FX8002-2DC10-1CJ0,A,260000,294000
 Signal cable pre-assembled for absolute encoder EnDat integrated into the motor 3x (2x0.14) C+4x 0.14+2x0.5 +4x 0.22 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.8 mm Length (m)= TYPE: 6FX8002-2EQ10 LENGTH (M) = +0 +0 +2 +0,6FX8002-2EQ10-1AC0,B,112000,135000
 Signal cable pre-assembled for absolute encoder EnDat integrated into the motor 3x (2x0.14) C+4x 0.14+2x0.5 +4x 0.22 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.8 mm Length (m)= TYPE: 6FX8002-2EQ10 LENGTH (M) = +0 +0 +3 +0,6FX8002-2EQ10-1AD0,B,120000,144000
 Signal cable pre-assembled for absolute encoder EnDat integrated into the motor 3x (2x0.14) C+4x 0.14+2x0.5 +4x 0.22 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.8 mm Length (m)= TYPE: 6FX8002-2EQ10 LENGTH (M) = +0 +10 +0 +0,6FX8002-2EQ10-1BA0,B,172000,206000
 Signal cable extension for base 6FX8002-2EQ10-.... 3x (2x0.14) C+4x 0.14+2x0.5 +4x 0.22 C Connector full thread M23 MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=9.8 mm Length (m)= TYPE: 6FX8002-2EQ14 LENGTH (M) = +0 +0 +4 +0,6FX8002-2EQ14-1AE0,B,144000,173000
 "Signal cable pre-assembled 840C/CSB I/O device 4x (2x0.18) C MOTION-CONNECT 800PLUS trailable, UL/CSA, DESINA Dmax=6.7 mm Length (m)= TYPE: 6FX8002-4AA21 LENGTH (M) = +0 +10 +0 +0",6FX8002-4AA21-1BA0,B,97000,116000
-,6FX8002-5CA01-1AC0,B,단가 협의 가능,0
-,6FX8002-5CA01-1AF0,B,단가 협의 가능,0
-"Power cable pre-assembled 4x 1.5 C, SPEED-CONNECT Sz. 1 for SINAMICS S120 Motor Module MOTION-CONNECT 800PLUS Trailable UL/CSA, DESINA Dmax=9.5 mm TYPE: 6FX8002-5CN01 LENGTH (M) = +0 +0 +5 +0",6FX8002-5CN01-1AF0,B,단가 협의 가능,272000
-"Power cable pre-assembled type: 6FX8002-5CR10 4x 2.5 C Screw connection M25/1PH808. for SINAMICS S120 Power Module and Motor Mod. Booksize Compact MOTION-CONNECT 800PLUS UL/CSA, DESINA Dmax=11 mm Length (m)= +0 +0 +5 +0.5",6FX8002-5CR10-1AF5,B,단가 협의 가능,220000
-,6FX8002-5DA01-1CA0,B,단가 협의 가능,0
-,6FX8002-5DA05-1BF0,B,단가 협의 가능,409000
-"Power cable pre-assembled type: 6FX8002-5DG21 4x 1.5+(2x1.5) C C, connector Connector full thread Sz. 1.5 for SINAMICS Power Module MOTION-CONNECT 800PLUS Dmax=12 mm, Length (m)= +0 +0 +9 +0.5",6FX8002-5DG21-1AK5,B,단가 협의 가능,319000
-"Power cable pre-assembled 4x 2.5+(2x1.5) C C SPEED-CONNECT connector Sz. 1.5 for SINAMICS S120 Power Module and Motor Mod. Booksize Compact MOTION-CONNECT 800PLUS trailable, UL/CSA, DESINA Dmax=13.8 mm Length (m)= TYPE: 6FX8002-5DG32 LENGTH (M) = +0 +20 +8 +0",6FX8002-5DG32-1CJ0,B,단가 협의 가능,619000
-Power cable sold by the meter type: 6FX8008-1BB31 4x 4 C MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=12.3 mm Type of delivery: to 99 m ring from 100 m disposable drum Length (m)= +0 +0 +8 +0,6FX8008-1BB31-1AJ0,B,단가 협의 가능,206000
-"signal cable sold by the meter for S120 4G0.38+2x0.38+4x0.2 C UL/CSA DESINA, trailable MOTION-CONNECT 800PLUS Dmax.=9.7 mm, length(m)=",6FX8008-1BE04-5AA0,A,단가 협의 가능,4925000
+,6FX8002-5CA01-1AC0,B,100000,
+,6FX8002-5CA01-1AF0,B,100000,
+"Power cable pre-assembled 4x 1.5 C, SPEED-CONNECT Sz. 1 for SINAMICS S120 Motor Module MOTION-CONNECT 800PLUS Trailable UL/CSA, DESINA Dmax=9.5 mm TYPE: 6FX8002-5CN01 LENGTH (M) = +0 +0 +5 +0",6FX8002-5CN01-1AF0,B,240000,272000
+"Power cable pre-assembled type: 6FX8002-5CR10 4x 2.5 C Screw connection M25/1PH808. for SINAMICS S120 Power Module and Motor Mod. Booksize Compact MOTION-CONNECT 800PLUS UL/CSA, DESINA Dmax=11 mm Length (m)= +0 +0 +5 +0.5",6FX8002-5CR10-1AF5,B,195000,220000
+,6FX8002-5DA01-1CA0,B,200000,
+,6FX8002-5DA05-1BF0,B,380000,409000
+"Power cable pre-assembled type: 6FX8002-5DG21 4x 1.5+(2x1.5) C C, connector Connector full thread Sz. 1.5 for SINAMICS Power Module MOTION-CONNECT 800PLUS Dmax=12 mm, Length (m)= +0 +0 +9 +0.5",6FX8002-5DG21-1AK5,B,290000,319000
+"Power cable pre-assembled 4x 2.5+(2x1.5) C C SPEED-CONNECT connector Sz. 1.5 for SINAMICS S120 Power Module and Motor Mod. Booksize Compact MOTION-CONNECT 800PLUS trailable, UL/CSA, DESINA Dmax=13.8 mm Length (m)= TYPE: 6FX8002-5DG32 LENGTH (M) = +0 +20 +8 +0",6FX8002-5DG32-1CJ0,B,550000,619000
+Power cable sold by the meter type: 6FX8008-1BB31 4x 4 C MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=12.3 mm Type of delivery: to 99 m ring from 100 m disposable drum Length (m)= +0 +0 +8 +0,6FX8008-1BB31-1AJ0,B,180000,206000
+"signal cable sold by the meter for S120 4G0.38+2x0.38+4x0.2 C UL/CSA DESINA, trailable MOTION-CONNECT 800PLUS Dmax.=9.7 mm, length(m)=",6FX8008-1BE04-5AA0,A,4200000,4925000
 "SIMATIC VS 130 EVALUATION UNIT, INTELLIGENT TRAINING FOR UP TO 15 DIFFERENT TYPES, FRAME 170 X 140 X 76 MM, 24 VDC/2.5A, 8 DI/6 DO, RS232- A. PROFIBUS-DP INTERFACE DEGREE OF PROTECTION IP40 (THIS PRODUCT IS PART OF THE SIMATIC VS130 COMPLETE PACKAGE)",6GF1018-3AA,B,단가 협의 가능,
 "IWLAN client, SCALANCE W722-1, RJ45, 1 radio, 1 R-SMA antenna port, iFeatures support IEEE 802.11a/b/g/h/n, 2.4/5 GHz, gross data rate 150 Mbit/s, 1x RJ45 max. 100 Mbit/s, 24 V DC, terminal block, IP20, 0... +55°C, WPA2/802.11i/e, observe national approvals! CERT ID: ELN-W1-RJ-E1, scope of delivery: Manuals on CD-ROM, German/English, 1x terminal block; for operation outside of USA/Israel",6GF3420-0AA20,B,2158000,6247000
 "********** spare part ********* voltage supply cable for SIMATIC VS100, length 10 m, pluggable on VS side one end free (this product is in SIMATIC VS110 complete package supply).",6GF9002-8CA,B,단가 협의 가능,
@@ -372,20 +372,20 @@ MOBY communications module ASM456 for PROFIBUS DP-V1; 2 read-write devices can b
 MOBY communication module ASM473 for remote Peripherals ET 200X parameterizable,6GT2002-0HA10,B,단가 협의 가능,
 RFID communication module RF170C for Installation in ET 200pro; Basic module for connection of 2 readers; without Connection block,6GT2002-0HD00,B,819000,
 RFID communication module RF170C for Installation in ET 200pro; Basic module for connection of 2 readers; with RS422 or RS232 without connection block.,6GT2002-0HD01,A,819000,1118000
-RFID communication module RF180C for PROFINET; 2 readers can be connected; without connection block for PROFINET,6GT2002-0JD00,B,489000,4478000
-RFID communication module RF180C for PROFINET; 2 readers can be connected; without connection block for PROFINET,6GT2002-0JD00,B,489000,4478000
-"********** spare part ********* RFID PROFINET/Ethernet connection block, M12, 7/8 5-pole for RF180C, RF182C.",6GT2002-1JD00,B,95000,588000
+RFID communication module RF180C for PROFINET; 2 readers can be connected; without connection block for PROFINET,6GT2002-0JD00,B,900000,4478000
+RFID communication module RF180C for PROFINET; 2 readers can be connected; without connection block for PROFINET,6GT2002-0JD00,B,900000,4478000
+"********** spare part ********* RFID PROFINET/Ethernet connection block, M12, 7/8 5-pole for RF180C, RF182C.",6GT2002-1JD00,B,150000,588000
 "MOBY Handheld terminal STGx Basic unit, PSION workabout PRO, incl. software",6GT2003-0AA10,B,단가 협의 가능,
 "********** spare part ********* MOBY I reading head for handheld terminal STG I, 134 kHz/1.81 MHz, without software without description",6GT2003-1CA00,B,단가 협의 가능,
 MOBY PLUG-IN POWER SUPPLY UNIT HOLDER FOR HAND-HELD TERMINAL 230VAC/10VDC EU-VERSION,6GT2090-0HC00,B,단가 협의 가능,
 "********** spare part ********* MOBY I/E/U plug-in cable, pre-assembled, between ASM 450/452/473 and SLG, PUR, length 5 m",6GT2091-1CH50,B,479000,
-"- - spare part - - MOBY I/E/U plug-in cable, pre-assembled, between ASM 456, RF160C, RF170C, RF18xC and SLG, PUR, trailing, length 5 m.",6GT2091-4FH50,B,173000,810000
+"- - spare part - - MOBY I/E/U plug-in cable, pre-assembled, between ASM 456, RF160C, RF170C, RF18xC and SLG, PUR, trailing, length 5 m.",6GT2091-4FH50,B,200000,810000
 "MOBY, holder for Handheld terminal STGx",6GT2093-0AA00,B,단가 협의 가능,
 "Transponder MDS D460 for RF200/RF300 ISO/MOBY D PILL ISO 15693, Chip type FUJITSU MB89R118, 2000 byte FRAM User memory 16x 3 mm (DxH); Minimum order quantity 50 units.",6GT2600-4AB00,A,10000,19000
 "Transponder MDS D424 for RF200/RF300 ISO/MOBY D button ISO 15693, Chip type FUJITSU MB89R118, 2000 byte FRAM User memory 27x 4 mm (DxH); Minimum order quantity 20 units.",6GT2600-4AC00,A,23000,46000
 MOBY D/RF300 ISO/RF200 Spacer for MDS D124/D324/D424/D524 and RF320T Temperature range up to +180 °C Packing unit = Minimum order quantity: 20 units.,6GT2690-0AK00,A,6000,8000
-"MOBY D Antenna connection cable for ANT D5, ANT D6 and ANT D10 between antenna and SLG D10/SLG D10S or RF290 Antenna switch, IP65, PVC, length 3.3 m.",6GT2691-0CH33,A,단가 협의 가능,113000
-"MOBY D antenna ANT D5 to connection to SLG D10/SLG D10S and SLG D11/SLG D11S Basic units, incl. spacer; 380x 380x 110 mm (LxWxH) antenna wire 3.3 m enclosed .",6GT2698-5AA10,A,단가 협의 가능,1403000
+"MOBY D Antenna connection cable for ANT D5, ANT D6 and ANT D10 between antenna and SLG D10/SLG D10S or RF290 Antenna switch, IP65, PVC, length 3.3 m.",6GT2691-0CH33,A,100000,113000
+"MOBY D antenna ANT D5 to connection to SLG D10/SLG D10S and SLG D11/SLG D11S Basic units, incl. spacer; 380x 380x 110 mm (LxWxH) antenna wire 3.3 m enclosed .",6GT2698-5AA10,A,800000,1403000
 "SIMATIC RF300 READER RF340R WITH RS422-INTERFACE (3964R) IP 67, -25 UP TO +70 DGR/C, 75 X 75 X 41 MM WITH INTEGRATED ANTENNA",6GT2801-2AA10,B,단가 협의 가능,
 "SIMATIC RF300 reader RF340R (RF300+ISO 15693) with RS422 interface (3964R) IP67. -25 to +70 °C, 75x 75x 41 mm with integrated antenna",6GT2801-2AB10,B,390000,
 "********** spare part ********* SIMATIC RF300 Reader RF380R (RF300+ISO 15693) RS 422/232 interface (3964R) IP67, -25 to +70 °C, 160x 80x 41 mm with integrated antenna.",6GT2801-3AB10,B,1059000,
@@ -439,7 +439,7 @@ MICROMASTER 420 without filter 380-480 V 3 AC +10/-10% 47-63 Hz constant torque 
 ****spare part**** SINAMICS Control Unit CU320 without CompactFlash card,6SL3040-0MA00-0AA1,B,단가 협의 가능,
 "***SPARE PART*** SINAMICS PULSED RESISTOR PLUS INPUT: 600 V DC, 15.6 OHM 15.6 OHM",6SL3100-1BE22-5AA0,B,단가 협의 가능,
 "***spare part*** SINAMICS S120 Single Motor Module input: 600 V DC output: 400 V 3 AC, 3 A type of construction: booksize internal air cooling optimized pulse patterns and support of the extended Safety Integrated functions incl. DRIVE-CLiQ cable",6SL3120-1TE13-0AA4,B,1079000,
-"**spare part** SINAMICS S120 Single Motor Module input: 600 V DC output: 400 V 3 AC, 30 A type of construction: booksize external air cooling optimized pulse patterns and support of the extended Safety Integrated functions incl. DRIVE-CLiQ cable",6SL3121-1TE23-0AA3,B,단가 협의 가능,6623000
+"**spare part** SINAMICS S120 Single Motor Module input: 600 V DC output: 400 V 3 AC, 30 A type of construction: booksize external air cooling optimized pulse patterns and support of the extended Safety Integrated functions incl. DRIVE-CLiQ cable",6SL3121-1TE23-0AA3,B,2500000,6623000
 "***spare part*** SINAMICS S120 Double Motor Module input: 600 V DC output: 400 V 3AC, 5 A/5 A type of construction: booksize external air cooling optimized pulse patterns and support of the extended Safety Integrated functions incl. DRIVE-CLiQ cable",6SL3121-2TE15-0AA3,B,2581000,
 "**spare part** SINAMICS S120 Active Line Module input: 380-480 V 3 AC, 50/60 Hz output: 600 V DC, 60 A, 36 kW type of construction: booksize external air cooling incl. DRIVE-CLiQ cable",6SL3131-7TE23-6AA3,B,단가 협의 가능,
 SINAMICS DC LINK RECTIFIER ADAPTER FOR DIRECT INFEED SCREW TERMINALS 0.5-10 MM2 FOR 50 AND 100 MM LINE/MOTOR MODULES IN BOOKSIZE FORMAT,6SL3162-2BD00-0AA0,B,54000,73000
@@ -512,7 +512,7 @@ SIMODRIVE 611 PULSED RESISTOR 0.3/25KW FOR EXTERNAL MOUNTING,6SN1113-1AA00-0DA0,
 "***SPARE PART*** SIMODRIVE 611 DIGITAL CONTROL LOOP BLOCK HIGH PERFORMANCE, 1 AXIS SIN/COS 1 VPP NC SOFTWARE, REQUIRED FROM 06.04.09",6SN1118-0DJ21-0AA2,B,단가 협의 가능,
 "***SPARE PART*** SIMODRIVE 611 DIGITAL HIGH PERFORMANCE, DIRECT MEAS. SYSTEM 1 AXIS CLOSED-LOOP CONTROL PLUG-IN NC SOFTWARE, REQUIRED FROM 06.04.09",6SN1118-0DJ23-0AA0,B,단가 협의 가능,
 "***SPARE PART*** SIMODRIVE 611 DIGITAL CONTROL LOOP BLOCK HIGH STANDARD, 2 AXES SIN/COS 1 VPP, NC SOFTWARE, REQUIRED FROM 06.04.09",6SN1118-0DM31-0AA1,B,단가 협의 가능,
-***SPARE PART*** SIMODRIVE 611 UNIVERSAL HR 2-AXIS CONTROL-LOOP BLOCK INCREMENTAL ENCODER SIN/COS 1 VPP ABSOLUTE VALUE ENCODER ENDAT SPEED/TORQUE SETPOINT POSITIONING EXPANDABLE BY OPTIONS,6SN1118-1NH01-0AA1,B,2420000,
+***SPARE PART*** SIMODRIVE 611 UNIVERSAL HR 2-AXIS CONTROL-LOOP BLOCK INCREMENTAL ENCODER SIN/COS 1 VPP ABSOLUTE VALUE ENCODER ENDAT SPEED/TORQUE SETPOINT POSITIONING EXPANDABLE BY OPTIONS,6SN1118-1NH01-0AA1,B,2600000,
 ***SPARE PART*** SIMODRIVE 611 U HR 1-AXIS CONTROL-LOOP BLOCK RESOLVER SPEED/TORQUE SETPOINT POSITIONING EXPANDABLE BY OPTIONS,6SN1118-1NJ01-0AA1,B,단가 협의 가능,
 "**spare part** SIMODRIVE 611-A Control Unit for main spindle drive with 1PH, output incremental encoder interface",6SN1121-0BA13-0AA0,B,단가 협의 가능,
 "***spare part*** SIMODRIVE 611 power module, 1-axis, 25 A, internal heat dissipation rated motor currents: 1FT5 = 12.5 A, 1FT6 = 9 A, asynchronous = 8 A",6SN1123-1AA00-0BA1,B,단가 협의 가능,
@@ -530,10 +530,10 @@ SIMODRIVE 611 PULSED RESISTOR 0.3/25KW FOR EXTERNAL MOUNTING,6SN1113-1AA00-0DA0,
 "***spare part*** SIMODRIVE 611 power module, 1-axis, 160 A, external heat dissipation rated motor currents: 1FT5 = 80 A, 1FT6 = 56 A, 1PH = 60 A, asynchronous = 60 A",6SN1124-1AA00-0EA1,B,단가 협의 가능,
 "***SPARE PART*** SIMODRIVE 611 INFEED/REGENERATIVE FEEDBACK MODULE 16/21 KW, STABILIZED, WITH INTERNAL COOLING, MAINS CONTACTOR WITH BREAK CONTACT",6SN1145-1BA01-0BA2,B,단가 협의 가능,
 "***spare part*** SIMODRIVE 611 infeed/regenerative feedback module, 36/47 kW stabilized, internal heat dissipation, mains protection with normally closed contact",6SN1145-1BA02-0CA1,B,단가 협의 가능,
-"***SPARE PART*** SIMODRIVE 611 INFEED/REGEN.FEEDBACK MODULE 36/47 KW, CLOSED-LOOP CONTROL, WITH INTERNAL COOLING, MAINS CONTACTOR WITH BREAK CONTACT.",6SN1145-1BA02-0CA2,B,5570000,
+"***SPARE PART*** SIMODRIVE 611 INFEED/REGEN.FEEDBACK MODULE 36/47 KW, CLOSED-LOOP CONTROL, WITH INTERNAL COOLING, MAINS CONTACTOR WITH BREAK CONTACT.",6SN1145-1BA02-0CA2,B,6000000,
 "***spare part*** SIMODRIVE 611 infeed/regenerative feedback module, 120/156 kW stabilized; internal heat dissipation",6SN1145-1BB00-0FA0,B,단가 협의 가능,
-"***SPARE PART*** SIMODRIVE 611 INFEED MODULE, 5/10 KW, UNREGULATED, WITH INTERNAL/EXT. COOLING",6SN1146-1AB00-0BA1,B,1940000,
-"***SPARE PART*** SIMODRIVE 611 INFEED MODULE, 5/10 KW, UNREGULATED, WITH INTERNAL/EXT. COOLING",6SN1146-1AB00-0BA1,B,1660000,
+"***SPARE PART*** SIMODRIVE 611 INFEED MODULE, 5/10 KW, UNREGULATED, WITH INTERNAL/EXT. COOLING",6SN1146-1AB00-0BA1,B,2000000,
+"***SPARE PART*** SIMODRIVE 611 INFEED MODULE, 5/10 KW, UNREGULATED, WITH INTERNAL/EXT. COOLING",6SN1146-1AB00-0BA1,B,1800000,
 "***SPARE PART*** SIMODRIVE 611 INFEED/REGEN.FEEDBACK MODULE 55/71 KW, CLOSED-LOOP CONTROL, EXTERNAL COOLING, MAINS CONTACTOR WITH BREAK CONTACT",6SN1146-1BB00-0DA1,B,단가 협의 가능,
 ***SPARE PART*** SIMODRIVE 611-D DRIVE BUS FOR MODULE WIDTH W = 100 MM ROUND CABLE,6SN1161-1CA00-0BA1,B,130000,
 ***SPARE PART*** SIMODRIVE 611-D DRIVE BUS FOR MODULE WIDTH W = 150 MM ROUND CABLE,6SN1161-1CA00-0CA1,B,130000,
