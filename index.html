@@ -248,6 +248,7 @@ fetch("stock.csv?v=20260130")
         part: cleanCols[1] || "",
         status: (cleanCols[2] || "").toUpperCase(),
         price: cleanCols[3] || ""
+        originalPrice: cleanCols[4] || ""
       };
     }).filter(row => row && row.part);
 
@@ -274,7 +275,7 @@ function renderTable() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td class="desc" onclick="toggleDesc(this)">
-        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 할인</span>` : ''}
+        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}','${row.originalPrice}'); event.stopPropagation();">🔥 특가 확인</span>` : ''}
         ${highlight(row.desc)}
       </td>
       <td><span class="mlfb-link" onclick="copyMLFB('${row.part}')">${highlight(row.part)}</span></td>
@@ -298,7 +299,7 @@ function renderMobileList() {
     const shortDesc = row.desc.length > 40 ? row.desc.slice(0, 40) + "..." : row.desc;
     div.innerHTML = `
       <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
-        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}'); event.stopPropagation();">🔥 할인</span>` : ''}
+        ${row.price ? `<span class="special-tag" onclick="openPriceModal('${row.price}','${row.originalPrice}'); event.stopPropagation();">🔥 특가 확인</span>` : ''}
         ${highlight(shortDesc)}
       </div>
       <div class="mobile-desc-content">${highlight(row.desc)}</div>
@@ -443,9 +444,33 @@ function toggleMobileDesc(el) { el.parentElement.classList.toggle("open"); }
 function copyMLFB(text) { navigator.clipboard.writeText(text); alert("복사되었습니다: " + text); }
 function openModal() { document.getElementById("contactModal").style.display = "flex"; }
 function closeModal() { document.getElementById("contactModal").style.display = "none"; }
-function openPriceModal(price) {
-  const cleanPrice = price.toString().replace(/[^0-9]/g, '');
-  document.getElementById("price-display").textContent = `💰 ${Number(cleanPrice).toLocaleString()} 원`;
+function openPriceModal(price, originalPrice) {
+
+  const cleanPrice = price ? price.toString().replace(/[^0-9]/g, '') : "";
+  const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
+
+  let html = "";
+
+  if (cleanOriginal) {
+    html = `
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="text-decoration:line-through; color:#888; font-size:14px;">
+          ${Number(cleanOriginal).toLocaleString()} 원
+        </span>
+        <span style="color:#dc2626; font-weight:700; font-size:18px;">
+          ${Number(cleanPrice).toLocaleString()} 원
+        </span>
+      </div>
+    `;
+  } else {
+    html = `
+      <span style="color:#dc2626; font-weight:700; font-size:18px;">
+        ${Number(cleanPrice).toLocaleString()} 원
+      </span>
+    `;
+  }
+
+  document.getElementById("price-display").innerHTML = html;
   document.getElementById("priceModal").style.display = "flex";
 }
 function closePriceModal() { document.getElementById("priceModal").style.display = "none"; }
