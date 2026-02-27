@@ -45,11 +45,15 @@
     .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
     .mlfb-link { color: #2563eb; text-decoration: underline; cursor: pointer; font-weight: 500; }
     .special-tag {
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      color: #dc2626;
+      font-weight: 700;
+      margin-right: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: transform 0.15s ease;
     }
     .special-tag:hover {
-      transform: translateY(-1px);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
     }
     .mobile-list { display: none; }
 
@@ -150,7 +154,7 @@
                class="price-contact-link"
                onclick="closePriceModal(); openModal();">
                문의
-          </a> 바랍니다.
+          </a>바랍니다.
         </p>
 
     <button onclick="closePriceModal()">닫기</button>
