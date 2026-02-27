@@ -482,19 +482,19 @@ function openPriceModal(price, originalPrice) {
 
   if (cleanOriginal) {
     html = `
-      <div style="background: #f9fafb; padding: 20px; border-radius: 12px; margin-bottom: 10px;">
+      <div style="padding: 10px 0; margin-bottom: 10px; border-bottom: 1px solid #eee;">
         <div style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
           기존가: ${Number(cleanOriginal).toLocaleString()}원
         </div>
         <div style="color: #ef4444; font-size: 24px; font-weight: 800;">
-          <span style="font-size: 16px; vertical-align: middle;">특가</span> 
+          <span style="font-size: 16px; vertical-align: middle;">할인가</span> 
           ${Number(cleanPrice).toLocaleString()}원
         </div>
       </div>
     `;
   } else {
     html = `
-      <div style="background: #f9fafb; padding: 20px; border-radius: 12px; margin-bottom: 10px;">
+      <div style="padding: 20px 0; margin-bottom: 10px;">
         <div style="color: #111827; font-size: 24px; font-weight: 800;">
           ${Number(cleanPrice).toLocaleString()}원
         </div>
