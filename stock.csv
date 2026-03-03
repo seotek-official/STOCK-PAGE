@@ -1,4 +1,4 @@
-"""#DATE=2026-02-27 5:00:00 PM""",,,,
+"""#DATE=2026-03-03 5:00:00 PM""",,,,
 Description,MLFB,Status,price,originalPrice
 "****spare part**** SIMOTICS M built-in synchronous motor DC link 600 V, 105K, IP00, 4-pole individual components: rotor stator,",1FE1093-4WN11-1BZ2,B,단가 협의 가능,
 "SIMOTICS M Built-in synchronous motor Spare part only rotor DC link 600V, 105K, IP00, 4-pole 100 Nm, In=90A, 40 kW NN=3800rpm, Nmax=18000rpm VPM required WATER-COOLED; Overhead encapsulation with standard protection 2x temp. sensor W/O ROTOR SLEEVE",1FE1094-4WL11-3WA0,B,2020000,2888000
@@ -45,7 +45,7 @@ SIMOTICS S synchronous motor 1FK7-CT PN=1.9 kW; UDC=600 V M0=8.5 Nm (100K); NN=3
 "SIMOTICS M Compact induction motor 2000rpm, 24.5kW, 117Nm, 51A, 372V; 5000rpm, 18.5kW, 47Nm, 52A, 425V; 1500rpm, 18.5kW, 118Nm, 51A, 283V forced ventilation; direction of air flow DE--> NDE; Degree of protection IP55 Incremental encoder 22-bit with commutation position (encoder IC22DQ) with DRIVE-CLiQ interface DESIGN IM B5 (IMV 1,IM V3) PLAIN SHAFT WITHOUT FITTED KEY; BEARING: STANDARD WITH FIXED BEARING, VIBRATION SEVERITY GRADE: SR/A, SHAFT AND FLANGE ACCURACY: R TERMINAL BOX (ABOVE) CABLE ENTRY ON THE RIGHT SIGNAL CONNECTION D-END",1PH8135-1DS02-0DA1,B,4770000,6453000
 "SIMOTICS M Compact induction motor 2000rpm, 24.5kW, 117Nm, 51A, 372V; 5000rpm, 18.5kW, 47Nm, 52A, 425V; 1500rpm, 18.5kW, 118Nm, 51A, 283V forced ventilation; direction of air flow DE--> NDE; Degree of protection IP55 Incremental encoder SIN/COS 1 VPP 2048 S/R with C and D track (encoder IC2048S/R) with temperature sensor KTY 84-130 DESIGN IM B3 (IM V5, IM V6) PLAIN SHAFT WITHOUT FITTED KEY; BEARING: STANDARD WITH FIXED BEARING, VIBRATION SEVERITY GRADE: S/A, SHAFT AND FLANGE ACCURACY: R TERMINAL BOX (ABOVE) CABLE ENTRY ON THE RIGHT SIGNAL CONNECTION D-END",1PH8135-1MS00-0CA1,B,단가 협의 가능,
 "SIMOTICS M compact asynchronous motor 1000 rpm 17 kW 162 Nm 43 A 307 V 1150 rpm 19.5 kW 162 Nm 43 A 350 V 1350 rpm 22 kW 156 Nm 42 A 404 V 1500 rpm 24 kW 153 Nm 41 A 447 V forced ventilation; direction of air flow DE--> NDE; IP55 degree of protection Incremental encoder 22-bit with commutation position (encoder IC22DQ) with DRIVE-CLiQ interface DESIGN IM B5 (IMV 1,IM V3) SHAFT WITH FITTED KEY HALF-KEY BALANCING BEARING: STANDARD WITH FIXED BEARING, VIBRATION SEVERITY GRADE: R/A, FLANGE ACCURACY: R TERMINAL BOX (ABOVE) CABLE ENTRY ON THE RIGHT SIGNAL CONNECTION D-END",1PH8137-1DD02-2BA1,B,4780000,6464000
-,20102110712110290001,B,단가 협의 가능,
+,2.01021E+19,B,단가 협의 가능,
 #N/A,2KJ1503-5DA00-0DD2-Z,B,단가 협의 가능,
 #N/A,2KJ3507-9XA50-0HH1-Z,B,단가 협의 가능,
 "EM 300 RS, FOR ET 200 X, ELECTRO-MECH. REVERS. STARTER, SETTING RANGE 1.4...2.0A, AC-3, 0.75KW/400V, WITHOUT BRAKE CONTACT, W. 9-POLE MOTOR FEEDER AND 9-POLE POWER CONNECTION",3RK1300-1BS01-1AA0,B,250000,
