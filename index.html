@@ -142,14 +142,14 @@
 <body>
 
 <div class="header">
-  <h2>서오 재고 조회</h2>
+  <h2>서오 단종 및 할인 재고 조회</h2>
   <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
 </div>
 <p>찾으시는 제품 [ ex) CPU, 1515... ] 또는 MLFB를 입력하세요</p>
 
 <div class="search-box">
   <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
-  <button id="searchBtn" type="button">검색</button>
+  <button id="searchBtn" type="button">검색</button><button id="viewAllBtn" type="button">구매가능 전체리스트</button>
 </div>
 
 <p style="font-size:13px;color:#777;margin-bottom:12px;">
@@ -527,6 +527,41 @@ const statusPriority = { 'A': 1, 'B': 2, 'C': 3 };
 
 document.getElementById("onlySpecial").addEventListener("change", () => {
   document.getElementById("searchBtn").click();
+});
+
+document.getElementById("viewAllBtn").addEventListener("click", () => {
+
+  const statusPriority = { A: 3, B: 2, C: 1 };
+  const map = new Map();
+
+  // 🔹 전체 데이터 기준으로 중복 제거
+  allRows.forEach(row => {
+    const key = row.part;
+
+    if (!map.has(key)) {
+      map.set(key, row);
+    } else {
+      const existing = map.get(key);
+      if (statusPriority[row.status] > statusPriority[existing.status]) {
+        map.set(key, row);
+      }
+    }
+  });
+
+  // 🔹 C 제외 (구매가능 기준이면 A/B만)
+  filteredRows = Array.from(map.values())
+    .filter(row => row.status === "A" || row.status === "B");
+
+  // 🔹 할인만 보기 체크 적용
+  const onlySpecial = document.getElementById("onlySpecial").checked;
+  if (onlySpecial) {
+    filteredRows = filteredRows.filter(row => row.price);
+  }
+
+  searchKeyword = ""; // 검색 강조 제거
+  currentPage = 1;
+  applySort();
+  updateView();
 });
 
 
